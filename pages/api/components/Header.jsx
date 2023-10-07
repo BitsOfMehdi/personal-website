@@ -5,17 +5,23 @@ const Header = () => {
   console.log(thumbnail);
   return (
     <div className={classes.container}>
-      <div className={classes["thumbnail-container"]}>
-        <img src={thumbnail.src} alt="thumbnail" />
+      <div className={classes["right-container"]}>
+        <div className={classes["thumbnail-container"]}>
+          <img src={thumbnail.src} alt="thumbnail" />
+        </div>
+        <h1>My Portfolio</h1>
       </div>
-      <h1>My Portfolio</h1>
-      <button>Home</button>
-      <button>About</button>
-      <button>Projects</button>
-      <button>Contact</button>
-      <div>
-        <input type="text" placeholder="Search in site" />
-        <img src={icSearch.src} alt="ic-search" />
+      <div className={classes["left-container"]}>
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Projects</a>
+        <a href="">Contact</a>
+        <div className={classes.search}>
+          <input type="text" placeholder="Search in site" />
+          <button>
+            <img src={icSearch.src} alt="ic-search" />
+          </button>
+        </div>
       </div>
     </div>
   );
