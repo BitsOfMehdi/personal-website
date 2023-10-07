@@ -5,13 +5,13 @@ const Header = () => {
   console.log(thumbnail);
   return (
     <div className={classes.container}>
-      <div className={classes["right-container"]}>
+      <span className={classes["right-container"]}>
         <div className={classes["thumbnail-container"]}>
           <img src={thumbnail.src} alt="thumbnail" />
         </div>
         <h1>My Portfolio</h1>
-      </div>
-      <div className={classes["left-container"]}>
+      </span>
+      <span className={classes["left-container"]}>
         <a href="">Home</a>
         <a href="">About</a>
         <a href="">Projects</a>
@@ -22,7 +22,7 @@ const Header = () => {
             <img src={icSearch.src} alt="ic-search" />
           </button>
         </div>
-      </div>
+      </span>
     </div>
   );
 };
