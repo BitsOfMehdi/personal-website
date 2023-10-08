@@ -1,6 +1,6 @@
 import styles from "../../../styles/Header.module.css";
 import thumbnail from "../../../public/asset/portfolio-pic.png";
-import icSearch from "../../../public/images/ic-search.svg";
+import icSearch from "../../../public/svg/ic-search.svg";
 
 const Header = () => {
   return (
