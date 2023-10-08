@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Welcome />
+      {/* <Welcome />
       <Featured />
       <Client />
       <About />
@@ -23,7 +23,7 @@ export default function Home() {
       <RecentPosts />
       <ContactMe />
       <WebsiteAnalytics />
-      <Copyright />
+      <Copyright /> */}
     </>
   );
 }
