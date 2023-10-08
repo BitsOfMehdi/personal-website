@@ -14,8 +14,8 @@ export default function Home() {
   return (
     <>
       <Header />
-      {/* <Welcome />
-      <Featured />
+      <Welcome />
+      {/* <Featured />
       <Client />
       <About />
       <Services />
