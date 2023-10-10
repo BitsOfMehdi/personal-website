@@ -5,7 +5,17 @@ const Welcome = () => {
   return (
     <section className={styles.container}>
       <div className={styles["left-container"]}>
-        <h1>Welcome Component</h1>
+        <h2>Welcome to My Protfolio</h2>
+        <p>I'm a passionate designer and developer.</p>
+        <input type="text" placeholder="Search for projects" />
+        <div className={styles.button1}>
+          <button className={styles.learn}>Learn more</button>
+          <button className={styles.go}>Go</button>
+        </div>
+        <div className={styles.button2}>
+          <button className={styles.featured}>Featured</button>
+          <button className={styles.recent}>Recent</button>
+        </div>
       </div>
       <div className={styles["right-container"]}>
         <img className={styles.vahid} src={vahid.src} alt="Vahid" />
