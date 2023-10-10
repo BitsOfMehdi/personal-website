@@ -1,0 +1,134 @@
+.container {
+  display: flex;
+  padding: 60px 170px;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  align-self: stretch;
+
+  background-image: url("../public/images/welcome-background.jpg"),
+    linear-gradient(lightgray, lightgray);
+  background-position: center, 50% 50%;
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-color: rgba(211, 23, 23, 0.6);
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  gap: 24px;
+}
+
+.left-container h2 {
+  align-self: stretch;
+
+  color: #17191c;
+  font-family: Roboto;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px; /* 120% */
+}
+
+.left-container p {
+  align-self: stretch;
+
+  color: #000;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+.left-container input {
+  padding: 8px 12px;
+  width: 336px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  font-family: Roboto;
+
+  /* height: 20px;
+  flex: 1 0 0;
+
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.5);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; 142.857% */
+}
+.button1 .button2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button1 button {
+  width: 160px;
+  height: 48px;
+  padding: 8px 16px;
+  border-width: 2px;
+  border-radius: 6px;
+  border-style: solid;
+  color: #fff;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.learn {
+  margin-right: 12px;
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.go {
+  background-color: #000;
+}
+
+.button2 button {
+  width: 120px;
+  height: 32px;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background: rgba(217, 217, 217, 0.5);
+
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+
+.featured {
+  margin-right: 12px;
+}
+
+.right-container img {
+  width: 190.562px;
+  height: 300px;
+  position: relative;
+  /* left: 151.438px; */
+  top: 63px;
+}
+
+/* .vahid {
+  align-self: flex-end;
+  right: 151px;
+  bottom: 0px;
+  width: 190.562px;
+  height: 300px;
+} */
