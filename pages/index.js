@@ -1,6 +1,6 @@
 import Header from "./api/components/Header";
 import Welcome from "./api/components/Welcome";
-import Featured from "./api/components/Featured";
+import Featured from "./api/components/Featured/Featured";
 import Client from "./api/components/Client";
 import About from "./api/components/About";
 import Services from "./api/components/Services";
@@ -15,8 +15,8 @@ export default function Home() {
     <>
       <Header />
       <Welcome />
-      {/* <Featured />
-      <Client />
+      <Featured />
+      {/* <Client />
       <About />
       <Services />
       <Me />
