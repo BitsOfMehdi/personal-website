@@ -15,8 +15,8 @@ export default function Home() {
     <>
       <Header />
       <Welcome />
-      {/* <Featured />
-      <Client />
+      <Featured />
+      {/* <Client />
       <About />
       <Services />
       <Me />
