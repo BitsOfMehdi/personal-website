@@ -4,7 +4,7 @@ import vahid from "../../../public/images/dash-vahid.png";
 const Welcome = () => {
   return (
     <section className={styles.container}>
-      <div className={styles["left-container"]}>
+      <span className={styles["left-container"]}>
         <h2>Welcome to My Protfolio</h2>
         <p>I'm a passionate designer and developer.</p>
         <input type="text" placeholder="Search for projects" />
@@ -16,10 +16,10 @@ const Welcome = () => {
           <button className={styles.featured}>Featured</button>
           <button className={styles.recent}>Recent</button>
         </div>
-      </div>
-      <div className={styles["right-container"]}>
+      </span>
+      <span className={styles["right-container"]}>
         <img className={styles.vahid} src={vahid.src} alt="Vahid" />
-      </div>
+      </span>
     </section>
   );
 };
