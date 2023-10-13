@@ -1,7 +1,7 @@
 import Header from "./api/components/Header";
 import Welcome from "./api/components/Welcome";
 import Featured from "./api/components/Featured/Featured";
-import Client from "./api/components/Client";
+import Client from "./api/components/Client/Client";
 import About from "./api/components/About";
 import Services from "./api/components/Services";
 import Me from "./api/components/Me";
@@ -16,8 +16,8 @@ export default function Home() {
       <Header />
       <Welcome />
       <Featured />
-      {/* <Client />
-      <About />
+      <Client />
+      {/*  <About />
       <Services />
       <Me />
       <RecentPosts />
