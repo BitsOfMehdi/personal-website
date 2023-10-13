@@ -1,6 +1,7 @@
 import styles from "../../../../styles/Featured/ProjectItem.module.css";
 
 const ProjectItem = ({ item }) => {
+  console.log(item.image);
   return (
     <div>
       <div className={styles["img-container"]}>
