@@ -1,26 +1,28 @@
 import ProjectItem from "./ProjectItem";
 
 import styles from "../../../../styles/Featured/Featured.module.css";
-import projectImg from "../../../../public/images/joker/profile.jpg";
+import webImg from "../../../../public/images/featured/web.png";
+import uiuxImg from "../../../../public/images/featured/uiux.png";
+import mobileImg from "../../../../public/images/featured/mobile.png";
 
 const dummy_data = [
   {
     id: "01",
     title: "Project 2",
     subtitle: "Web Development",
-    image: projectImg.src,
+    image: webImg.src,
   },
   {
     id: "02",
     title: "Project 1",
     subtitle: "UI/UX Design",
-    image: projectImg.src,
+    image: uiuxImg.src,
   },
   {
     id: "03",
     title: "Project 3",
     subtitle: "Mobile App Development",
-    image: projectImg.src,
+    image: mobileImg.src,
   },
 ];
 
