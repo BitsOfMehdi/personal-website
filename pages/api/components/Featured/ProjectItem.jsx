@@ -3,7 +3,7 @@ import styles from "../../../../styles/Featured/ProjectItem.module.css";
 const ProjectItem = ({ item }) => {
   console.log(item.image);
   return (
-    <div>
+    <div className={styles.container}>
       <div className={styles["img-container"]}>
         <img src={item.image} alt={item.title} />
       </div>
