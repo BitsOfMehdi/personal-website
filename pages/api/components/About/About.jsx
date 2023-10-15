@@ -1,5 +1,22 @@
 import styles from "../../../../styles/About/About.module.css";
 
+dummy_skills = [
+  {
+    title: "Design Skills",
+    subtitle: "UI/UX Design",
+    desc: "indness and say hello to those around you",
+    image: "",
+    tools: ["Sketch", "Figma"],
+  },
+  {
+    title: "Development Skills",
+    subtitle: "Web Development",
+    desc: "indness and say hello to those around you",
+    image: "",
+    tools: ["HTML", "CSS", "JavaScript"],
+  },
+];
+
 const About = () => {
   return (
     <section className={styles.container}>
