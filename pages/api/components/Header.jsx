@@ -1,5 +1,7 @@
 import styles from "../../../styles/Header.module.css";
+
 import thumbnail from "../../../public/images/joker/portfolio-pic.png";
+
 import icSearch from "../../../public/svg/ic-search.svg";
 
 const Header = () => {
