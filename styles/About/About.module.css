@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  padding: 60px 170px;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  align-self: stretch;
+}
+
+.left-span {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  flex: 1 0 0;
+}
+
+.right-span {
+  display: flex;
+  height: 664px;
+  padding: 20px 0px;
+  align-items: flex-start;
+  flex: 1 0 0;
+}
