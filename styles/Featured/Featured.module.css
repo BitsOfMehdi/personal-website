@@ -1,0 +1,27 @@
+.container {
+  padding: 60px 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.upper-span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.upper-span button {
+}
+
+.lower-span {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}

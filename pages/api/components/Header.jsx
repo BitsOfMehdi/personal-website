@@ -1,17 +1,19 @@
 import styles from "../../../styles/Header.module.css";
-import thumbnail from "../../../public/asset/portfolio-pic.png";
+
+import thumbnail from "../../../public/images/joker/portfolio-pic.png";
+
 import icSearch from "../../../public/svg/ic-search.svg";
 
 const Header = () => {
   return (
     <section className={styles.container}>
-      <span className={styles["left-container"]}>
+      <span className={styles["left-span"]}>
         <div className={styles["thumbnail-container"]}>
           <img src={thumbnail.src} alt="thumbnail" />
         </div>
         <h1>My Portfolio</h1>
       </span>
-      <span className={styles["right-container"]}>
+      <span className={styles["right-span"]}>
         <a href="">Home</a>
         <a href="">About</a>
         <a href="">Projects</a>

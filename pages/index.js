@@ -1,7 +1,7 @@
 import Header from "./api/components/Header";
 import Welcome from "./api/components/Welcome";
-import Featured from "./api/components/Featured";
-import Client from "./api/components/Client";
+import Featured from "./api/components/Featured/Featured";
+import Client from "./api/components/Client/Client";
 import About from "./api/components/About";
 import Services from "./api/components/Services";
 import Me from "./api/components/Me";
@@ -14,10 +14,10 @@ export default function Home() {
   return (
     <>
       <Header />
-      {/* <Welcome />
+      <Welcome />
       <Featured />
       <Client />
-      <About />
+      {/*  <About />
       <Services />
       <Me />
       <RecentPosts />
