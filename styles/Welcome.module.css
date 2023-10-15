@@ -43,27 +43,11 @@
   justify-content: space-between;
 }
 
-.button1 button {
-  width: 160px;
-  height: 48px;
-  padding: 8px 16px;
-  border-width: 2px;
-  border-radius: 8px;
-  border-style: solid;
-  color: #fff;
-  font-family: Inter;
-  font-size: 14px;
-  font-weight: 800;
-}
-
 .learn {
   margin-right: 12px;
   background-color: transparent;
   border-color: #fff;
-}
-
-.go {
-  background-color: #000;
+  border-width: 2px;
 }
 
 .button2 button {

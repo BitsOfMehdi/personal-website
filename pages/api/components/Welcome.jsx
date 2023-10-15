@@ -10,11 +10,11 @@ const Welcome = () => {
         <input type="text" placeholder="Search for projects" />
         <div className={styles.button1}>
           <button className={styles.learn}>Learn more</button>
-          <button className={styles.go}>Go</button>
+          <button>Go</button>
         </div>
         <div className={styles.button2}>
           <button className={styles.featured}>Featured</button>
-          <button className={styles.recent}>Recent</button>
+          <button>Recent</button>
         </div>
       </span>
       <span className={styles["right-container"]}>
