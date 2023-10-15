@@ -1,11 +1,11 @@
 .container {
+  height: 270px;
   display: flex;
   padding: 60px 170px;
   justify-content: center;
   align-items: center;
   gap: 60px;
   align-self: stretch;
-
   background-image: url("../public/images/welcome-background.jpg"),
     linear-gradient(lightgray, lightgray);
   background-position: center, 50% 50%;
@@ -30,6 +30,14 @@
   background: #fff;
   font-family: Roboto;
 }
+
+.right-container img {
+  width: 190.562px;
+  height: 300px;
+  position: relative;
+  top: 47px;
+}
+
 .button1 .button2 {
   display: flex;
   justify-content: space-between;
@@ -65,7 +73,6 @@
   border: none;
   border-radius: 6px;
   background: rgba(217, 217, 217, 0.5);
-
   overflow: hidden;
   color: #fff;
   text-align: center;
@@ -81,18 +88,3 @@
 .featured {
   margin-right: 12px;
 }
-
-.right-container img {
-  width: 190.562px;
-  height: 300px;
-  position: relative;
-  top: 63px;
-}
-
-/* .vahid {
-  align-self: flex-end;
-  right: 151px;
-  bottom: 0px;
-  width: 190.562px;
-  height: 300px;
-} */
