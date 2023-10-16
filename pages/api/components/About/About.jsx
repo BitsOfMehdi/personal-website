@@ -1,32 +1,41 @@
-import styles from "../../../../styles/About/About.module.css";
+import SkillItem from "./SkillItem";
 
-dummy_skills = [
+import styles from "../../../../styles/About/About.module.css";
+import designSkill from "../../../../public/images/about/designSkill.png";
+import devSkill from "../../../../public/images/about/devSkill.png";
+import aboutImg from "../../../../public/images/about/aboutImg.png";
+
+const dummy_skills = [
   {
     title: "Design Skills",
     subtitle: "UI/UX Design",
     desc: "indness and say hello to those around you",
-    image: "",
+    image: designSkill.src,
     tools: ["Sketch", "Figma"],
   },
   {
     title: "Development Skills",
     subtitle: "Web Development",
     desc: "indness and say hello to those around you",
-    image: "",
+    image: devSkill.src,
     tools: ["HTML", "CSS", "JavaScript"],
   },
 ];
 
 const About = () => {
+  const skillItems = dummy_skills.map((e) => <SkillItem key={e.id} item={e} />);
+
   return (
     <section className={styles.container}>
-      <span className={styles["left-span"]}>
+      <div className={styles.leftContainer}>
         <h2>About Me</h2>
         <p>Learn more about my skills and experience.</p>
         <button>Download Resume</button>
-        <ul></ul>
-      </span>
-      <span className={styles["right-span"]}></span>
+        <div>{skillItems}</div>
+      </div>
+      <div className={styles.rightContainer}>
+        <img src={aboutImg.src} />
+      </div>
     </section>
   );
 };

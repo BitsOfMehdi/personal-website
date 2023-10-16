@@ -7,7 +7,7 @@
   align-self: stretch;
 }
 
-.left-span {
+.leftContainer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -15,10 +15,21 @@
   flex: 1 0 0;
 }
 
-.right-span {
+.leftContainer button {
+  white-space: nowrap; /* prevent the text from wrapping to the next line */
+}
+
+.rightContainer {
   display: flex;
+  width: 520px;
   height: 664px;
   padding: 20px 0px;
   align-items: flex-start;
   flex: 1 0 0;
+}
+
+.rightContainer img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
