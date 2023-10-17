@@ -9,9 +9,9 @@ const SkillItem = ({ item }) => {
       </div>
       <div className={styles.rightContainer}>
         <h3>{item.title}</h3>
-        <p>{item.subtitle}</p>
+        <p className={styles.subtitle}>{item.subtitle}</p>
         <p>{item.desc}</p>
-        <div>{tools}</div>
+        <div className={styles.tools}>{tools}</div>
       </div>
     </div>
   );

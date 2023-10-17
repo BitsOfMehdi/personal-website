@@ -31,7 +31,7 @@ const About = () => {
         <h2>About Me</h2>
         <p>Learn more about my skills and experience.</p>
         <button>Download Resume</button>
-        <div>{skillItems}</div>
+        <div className={styles.list}>{skillItems}</div>
       </div>
       <div className={styles.rightContainer}>
         <img src={aboutImg.src} />
