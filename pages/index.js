@@ -19,8 +19,8 @@ export default function Home() {
       <Client />
       <About />
       <Services />
-      {/*   <Me />
-      <RecentPosts />
+      <Me />
+      {/*   <RecentPosts />
       <ContactMe />
       <WebsiteAnalytics />
       <Copyright /> */}
