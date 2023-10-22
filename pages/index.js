@@ -3,7 +3,7 @@ import Welcome from "./api/components/Welcome";
 import Featured from "./api/components/Featured/Featured";
 import Client from "./api/components/Client/Client";
 import About from "./api/components/About/About";
-import Services from "./api/components/Services";
+import Services from "./api/components/services/Services";
 import Me from "./api/components/Me";
 import RecentPosts from "./api/components/RecentPosts";
 import ContactMe from "./api/components/ContactMe";
@@ -18,8 +18,8 @@ export default function Home() {
       <Featured />
       <Client />
       <About />
-      {/*  <Services />
-      <Me />
+      <Services />
+      {/*   <Me />
       <RecentPosts />
       <ContactMe />
       <WebsiteAnalytics />
