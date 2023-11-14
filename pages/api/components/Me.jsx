@@ -1,18 +1,14 @@
-import "../../../styles/Me.scss";
-
 const Me = () => {
   return (
-    <section>
+    <section className="me">
+      <div className="me__avatar"></div>
       <div>
-        <img />
-      </div>
-      <div>
-        <h3></h3>
+        <h3>Vahid Alilou</h3>
         <div>
-          <span></span>
-          <span></span>
+          <span>Designer</span>
+          <span>Developer</span>
         </div>
-        <p></p>
+        <p>Passionate about creating intuitive and user-friendly interfaces.</p>
       </div>
       <div>
         <button></button>
