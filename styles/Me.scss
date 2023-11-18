@@ -13,4 +13,65 @@
     border-radius: 50px;
     background: rgba(217, 217, 217, 0.5);
   }
+
+  &__middle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1 0 0;
+
+    &__title {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+    }
+
+    &__tag-container {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      align-self: stretch;
+
+      &__tag {
+        display: flex;
+        padding: 2px 4px;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+        border-radius: 2px;
+        border: 0.5px solid rgba(0, 0, 0, 0.1);
+        background: rgba(217, 217, 217, 0.5);
+
+        &__text {
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+    }
+
+    &__paragraph {
+      color: #fff;
+    }
+  }
+
+  &__button-container {
+    display: flex;
+    width: 160px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    &__button {
+      width: 92px;
+      height: 33px;
+    }
+
+    &__button--white {
+      width: 92px;
+      height: 33px;
+      background-color: transparent;
+      border: 1px solid #fff;
+    }
+  }
 }
