@@ -20,8 +20,8 @@ export default function Home() {
       <About />
       <Services />
       <Me />
-      {/*   <RecentPosts />
-      <ContactMe />
+      <RecentPosts />
+      {/*   <ContactMe />
       <WebsiteAnalytics />
       <Copyright /> */}
     </>
