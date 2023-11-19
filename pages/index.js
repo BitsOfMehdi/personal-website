@@ -8,7 +8,7 @@ import Me from "./api/components/Me";
 import RecentPosts from "./api/components/RecentPosts";
 import ContactMe from "./api/components/ContactMe";
 import WebsiteAnalytics from "./api/components/WebsiteAnalytics";
-import Copyright from "./api/components/Copyright";
+import Footer from "./api/components/Footer";
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
       <RecentPosts />
       <ContactMe />
       <WebsiteAnalytics />
-      {/* <Copyright /> */}
+      <Footer />
     </>
   );
 }
