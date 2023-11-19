@@ -21,8 +21,8 @@ export default function Home() {
       <Services />
       <Me />
       <RecentPosts />
-      {/*   <ContactMe />
-      <WebsiteAnalytics />
+      <ContactMe />
+      {/*   <WebsiteAnalytics />
       <Copyright /> */}
     </>
   );
