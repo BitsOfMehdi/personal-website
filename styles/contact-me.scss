@@ -1,0 +1,64 @@
+.contact-me {
+  display: flex;
+  padding: 60px 170px;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  align-self: stretch;
+
+  &__left-container {
+    width: 520px;
+    height: 451.589px;
+  }
+
+  &__right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    flex: 1 0 0;
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      flex: 1 0 0;
+    }
+
+    button {
+      width: 92px;
+      height: 33px;
+    }
+
+    &__input {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 4px;
+      align-self: stretch;
+
+      label {
+        align-self: stretch;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+      }
+
+      input {
+        display: flex;
+        padding: 8px 12px;
+        align-items: center;
+        gap: 4px;
+        align-self: stretch;
+        border-radius: 6px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background: #fff;
+      }
+    }
+  }
+}
