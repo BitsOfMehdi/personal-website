@@ -1,43 +1,11 @@
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+
 export default function App() {
   return (
     <main className="bg-background text-dark font-sans">
-      <header className="sticky top-0 z-50 bg-background shadow-md">
-        <nav className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Mehdi Mousavi</h1>
-          <ul className="flex space-x-6 text-sm font-medium">
-            <li>
-              <a href="#about" className="hover:text-accent">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#work" className="hover:text-accent">
-                Work
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="hover:text-accent">
-                Contact
-              </a>
-            </li>
-            <li>
-              <a href="#blog" className="hover:text-accent">
-                Blog
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
-      <section className="min-h-screen flex items-center justify-center text-center p-10">
-        <div>
-          <h1 className="text-5xl font-bold">Hi, I'm Mehdi Mousavi</h1>
-          <p className="text-xl mt-4 max-w-2xl mx-auto">
-            Full Stack Web Developer specialized in JavaScript, React, and
-            building scalable, user-focused applications.
-          </p>
-        </div>
-      </section>
+      <Header />
+      <Hero />
 
       <section id="about" className="bg-primary p-10 text-white">
         <h2 className="text-3xl font-semibold mb-4">About Me</h2>
