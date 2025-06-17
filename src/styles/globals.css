@@ -1,9 +1,7 @@
-@import "tailwindcss";
-
-/* Define design tokens using @theme */
-@theme {
-  --font-sans: "Geist Sans", "ui-sans-serif", "system-ui", sans-serif;
-  --font-mono: "Geist Mono", "ui-monospace", "SFMono-Regular", monospace;
+/* Global CSS Variables */
+:root {
+  --font-sans: "Geist Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, monospace;
 
   /* Custom Colors */
   --color-background: #edd6cc;
@@ -11,23 +9,26 @@
   --color-accent: #c4772a;
   --color-dark: #233349;
 
-  /* Optional: easings, breakpoints, spacing, etc. */
+  /* Optional: easings, breakpoints, spacing */
   --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
   --breakpoint-3xl: 1920px;
 }
 
-/* Optional: Dark theme using media query */
+/* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
-  @theme {
+  :root {
     --color-background: #233349;
     --color-dark: #edd6cc;
-    /* Adjust others if needed */
+    /* You can override others as needed */
   }
 }
 
-/* Base styles */
+/* Base Styles */
 body {
+  margin: 0;
+  padding: 0;
   background-color: var(--color-background);
   color: var(--color-dark);
   font-family: var(--font-sans);
+  line-height: 1.6;
 }
