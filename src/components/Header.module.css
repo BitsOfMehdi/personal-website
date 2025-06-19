@@ -8,11 +8,13 @@
 
 .navbar {
   max-width: 1120px; /* ~7xl */
+  height: 60px;
+  height: auto;
   margin: 0 auto;
-  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -20,6 +22,8 @@
   font-weight: bold;
   cursor: pointer;
   transition: color 0.2s;
+  margin-block: auto;
+  margin-inline-start: 10px;
 }
 
 .logo:hover {
@@ -29,11 +33,15 @@
 .menuWrapper {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: flex-end;
+  flex-grow: 1;
+  max-width: 500px;
 }
 
 .divider {
-  width: 50px;
+  display: flex;
+  flex-grow: 1;
+  max-width: 50px;
   border-top: 1px solid var(--muted, #ccc);
 }
 
@@ -41,15 +49,16 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 320px;
-  position: relative;
+  max-width: 320px;
+  padding-inline-start: 0;
 }
 
 .navItem {
-  flex: 1;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  width: 100px;
 }
 
 .navLink {
@@ -75,4 +84,16 @@
   position: relative;
   top: 1px;
   pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .divider {
+    display: none;
+  }
+}
+
+@media (max-width: 567px) {
+  .navbar {
+    flex-direction: column;
+  }
 }
