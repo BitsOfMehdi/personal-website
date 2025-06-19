@@ -8,8 +8,7 @@
 
 .navbar {
   max-width: 1120px; /* ~7xl */
-  height: 60px;
-  height: auto;
+  height: 50px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -51,6 +50,7 @@
   align-items: center;
   max-width: 320px;
   padding-inline-start: 0;
+  margin-block: auto;
 }
 
 .navItem {
@@ -69,18 +69,19 @@
 }
 
 .navLink:hover {
-  color: var(--accent, #1e90ff);
+  color: var(--color-accent);
 }
 
 .active {
   font-weight: bold;
-  color: var(--accent, #1e90ff);
-  transform: translateY(10px);
+  font-size: 18px;
+  color: var(--color-accent);
+  /* transform: translateY(2px); */
 }
 
 .dot {
   margin-inline: 4px;
-  color: var(--muted, #888);
+  color: var(--accent);
   position: relative;
   top: 1px;
   pointer-events: none;

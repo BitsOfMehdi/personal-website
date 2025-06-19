@@ -1,5 +1,6 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+import SectionContainer from "@/components/section-container";
+import Header from "@/components/header";
+import Hero from "@/components/hero";
 import styles from "@/styles/home.module.css";
 
 export default function App() {
@@ -7,8 +8,7 @@ export default function App() {
     <main className={styles.main}>
       <Header />
       <Hero />
-
-      <section id="about" className={styles.aboutSection}>
+      <SectionContainer id="about">
         <h2>About Me</h2>
         <p>
           Experienced Full Stack Web Developer with a strong track record of
@@ -17,9 +17,9 @@ export default function App() {
           React.js, Next.js, Vue.js, and TypeScript for crafting intuitive UIs,
           and in Node.js with Express for developing robust APIs.
         </p>
-      </section>
+      </SectionContainer>
 
-      <section id="work" className={styles.workSection}>
+      <SectionContainer id="work">
         <h2>Work Experience</h2>
         <div className={styles.workList}>
           <div className={styles.jobItem}>
@@ -74,19 +74,19 @@ export default function App() {
             </ul>
           </div>
         </div>
-      </section>
+      </SectionContainer>
 
-      <section id="contact" className={styles.contactSection}>
+      <SectionContainer id="contact">
         <h2>Contact</h2>
         <p>Email: mehdi@example.com</p>
         <p>GitHub: github.com/yourusername</p>
         <p>LinkedIn: linkedin.com/in/yourprofile</p>
-      </section>
+      </SectionContainer>
 
-      <section id="blog" className={styles.blogSection}>
+      <SectionContainer id="blog">
         <h2>Blog (Coming Soon)</h2>
         <p>This section will feature articles and tutorials in the future.</p>
-      </section>
+      </SectionContainer>
     </main>
   );
 }

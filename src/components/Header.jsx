@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import styles from "./Header.module.css";
+import styles from "./header.module.css";
 
 const sections = ["about", "work", "contact", "blog"];
 
@@ -60,9 +60,6 @@ export default function Header() {
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </a>
-                {/* {index < sections.length - 1 && (
-                  <span className={styles.dot}>•</span>
-                )} */}
               </li>
             ))}
           </ul>
