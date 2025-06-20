@@ -1,4 +1,4 @@
-.heroSection {
+/* .heroSection {
   min-height: 100vh;
   max-width: 1120px;
   margin-inline: auto;
@@ -11,6 +11,24 @@
   padding: 0 1rem;
   background-color: var(--color-background-container);
   border-radius: 0 0 7.5px 7.5px;
+} */
+
+.heroWrapper {
+  max-width: 1120px;
+  margin-inline: auto;
+  padding: 0 1rem;
+}
+
+.heroSection {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--color-background-container);
+  border-radius: 0 0 7.5px 7.5px;
+  width: 100%; /* Start full width of the wrapper */
 }
 
 .heading {
