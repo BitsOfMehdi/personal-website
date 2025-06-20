@@ -4,6 +4,7 @@
   z-index: 50;
   background: var(--background, #fff);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  /* margin-block-end: 20px; */
 }
 
 .navbar {
