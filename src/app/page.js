@@ -1,13 +1,38 @@
+"use client";
+import { useState, useReducer } from "react";
+
 import SectionContainer from "@/components/section-container";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import styles from "@/styles/home.module.css";
 
+const initialState = {
+  isHome: false,
+  isAbout: false,
+  isWork: false,
+  isContact: false,
+};
+
+const navReducer = (state, action) => {
+  switch (action) {
+    case "about":
+      return { isHome: false, isAbout: true, isWork: false, isContact: false };
+    case "work":
+      return { isHome: false, isAbout: false, isWork: true, isContact: false };
+    case "contact":
+      return { isHome: false, isAbout: false, isWork: false, isContact: true };
+    default:
+      return { isHome: true, isAbout: false, isWork: false, isContact: false };
+  }
+};
+
 export default function App() {
+  const [navState, navDispatch] = useReducer(navReducer, initialState);
+  console.log(navState);
   return (
     <main className={styles.main}>
-      <Header />
-      <Hero />
+      <Header navState={navState} navDispatch={navDispatch} />
+      <Hero isAbout={navState.isAbout} />
       <SectionContainer id="about">
         <h2>About Me</h2>
         <p>

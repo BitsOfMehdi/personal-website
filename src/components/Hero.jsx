@@ -2,13 +2,14 @@ import * as motion from "motion/react-client";
 
 import styles from "./hero.module.css";
 
-export default function Hero() {
+export default function Hero({ isAbout }) {
   return (
     <div className={styles.heroWrapper}>
       <motion.section
         className={styles.heroSection}
         initial={{ width: "1120px" }}
-        animate={{ width: "600px" }}
+        animate={{ width: isAbout ? "600px" : "1120px" }}
+        exit={{ width: "1120px" }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         style={{
           transformOrigin: "left", // Key: shrink from the right
