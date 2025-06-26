@@ -1,4 +1,4 @@
-"use client";
+// "use server";
 
 import { useState, useEffect } from "react";
 
@@ -9,34 +9,34 @@ export default function Work() {
 
   useEffect(() => {
     async function fetchWork() {
-      const response = await fetch("/api/work/");
-      console.log(response);
+      const response = await fetch("/api/work");
+      if (!response.ok) return;
+
+      const data = await response.json();
+
+      setWorkItems(data);
     }
 
     fetchWork();
   }, []);
+
+  console.log(workItems);
   return (
     <div className={styles.container}>
-      <h1>Test Work</h1>
-      <div className={styles.jobItem}>
-        <h3>Frontend Web Developer - Radio Free Asia</h3>
-        <p className={styles.jobMeta}>Aug 2023 - May 2025, Washington, D.C.</p>
-        <ul>
-          <li>
-            Led migration of 17 websites to React/Next.js improving performance
-            and editorial control.
-          </li>
-          <li>Built 40+ reusable React components in ArcXP CMS.</li>
-          <li>
-            Implemented forms with AWS Lambda integration, pagination logic, and
-            custom asset delivery via S3.
-          </li>
-          <li>
-            Worked on RESTful and GraphQL API integration and participated in
-            CI/CD pipeline.
-          </li>
-        </ul>
-      </div>
+      {workItems.length > 0 &&
+        workItems.map((el, i) => {
+          return (
+            <div className={styles.jobItem} key={i}>
+              <h3>{`${el.title} - ${el.company}`}</h3>
+              <p className={styles.jobMeta}>{`${el.date}, ${el.location}`}</p>
+              <ul>
+                {el.experiences.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
     </div>
   );
 }

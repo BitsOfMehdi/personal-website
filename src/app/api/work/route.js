@@ -1,6 +1,6 @@
 "use server";
 
-export const workHistory = [
+const workHistory = [
   {
     title: "Frontend Web Developer",
     company: "Radio Free Asia",
@@ -34,3 +34,7 @@ export const workHistory = [
     ],
   },
 ];
+
+export async function GET() {
+  return Response.json(workHistory);
+}
