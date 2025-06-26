@@ -11,6 +11,12 @@
   padding: 2.5rem;
 }
 
+.heroContainer {
+  display: flex;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
 .sectionTitle {
   font-size: 1.875rem; /* 3xl */
   font-weight: 600;

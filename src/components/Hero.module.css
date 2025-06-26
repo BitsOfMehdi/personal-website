@@ -1,21 +1,5 @@
-/* .heroSection {
-  min-height: 100vh;
-  max-width: 1120px;
-  margin-inline: auto;
-  margin-block-end: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 1rem;
-  background-color: var(--color-background-container);
-  border-radius: 0 0 7.5px 7.5px;
-} */
-
 .heroWrapper {
-  max-width: 1120px;
-  margin-inline: auto;
+  /* max-width: 1200px; */
   padding: 0 1rem;
 }
 

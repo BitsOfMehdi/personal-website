@@ -4,6 +4,9 @@ import { useState, useReducer } from "react";
 import SectionContainer from "@/components/section-container";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
+import About from "@/components/about";
+import Work from "@/components/work";
+
 import styles from "@/styles/home.module.css";
 
 const initialState = {
@@ -22,7 +25,7 @@ const navReducer = (state, action) => {
     case "contact":
       return { isHome: false, isAbout: false, isWork: false, isContact: true };
     default:
-      return { isHome: true, isAbout: false, isWork: false, isContact: false };
+      return state;
   }
 };
 
@@ -32,18 +35,11 @@ export default function App() {
   return (
     <main className={styles.main}>
       <Header navState={navState} navDispatch={navDispatch} />
-      <Hero isAbout={navState.isAbout} />
-      <SectionContainer id="about">
-        <h2>About Me</h2>
-        <p>
-          Experienced Full Stack Web Developer with a strong track record of
-          building responsive, scalable, and maintainable applications across
-          the frontend and backend. Proficient in JavaScript, and skilled in
-          React.js, Next.js, Vue.js, and TypeScript for crafting intuitive UIs,
-          and in Node.js with Express for developing robust APIs.
-        </p>
-      </SectionContainer>
-
+      <div className={styles.heroContainer}>
+        <Hero isAbout={navState.isAbout} />
+        <About isAbout={navState.isAbout} />
+      </div>
+      <Work />
       <SectionContainer id="work">
         <h2>Work Experience</h2>
         <div className={styles.workList}>

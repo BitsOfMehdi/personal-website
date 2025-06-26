@@ -1,6 +1,5 @@
 .header {
   position: sticky;
-  top: 0;
   z-index: 50;
   background: var(--background, #fff);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
@@ -24,10 +23,10 @@
   transition: color 0.2s;
   margin-block: auto;
   margin-inline-start: 10px;
-}
 
-.logo:hover {
-  color: var(--accent, #1e90ff);
+  &:hover {
+    color: var(--color-accent);
+  }
 }
 
 .menuWrapper {
@@ -36,13 +35,6 @@
   justify-content: flex-end;
   flex-grow: 1;
   max-width: 500px;
-}
-
-.divider {
-  display: flex;
-  flex-grow: 1;
-  max-width: 50px;
-  border-top: 1px solid var(--muted, #ccc);
 }
 
 .navList {
@@ -69,25 +61,17 @@
   border: none;
   background-color: transparent;
   font-size: 16px;
-}
 
-.navLink:hover {
-  color: var(--color-accent);
+  &:hover {
+    cursor: pointer;
+    color: var(--color-accent);
+  }
 }
 
 .active {
   font-weight: bold;
   font-size: 18px;
   color: var(--color-accent);
-  /* transform: translateY(2px); */
-}
-
-.dot {
-  margin-inline: 4px;
-  color: var(--accent);
-  position: relative;
-  top: 1px;
-  pointer-events: none;
 }
 
 @media (max-width: 768px) {

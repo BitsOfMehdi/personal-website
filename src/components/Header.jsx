@@ -20,7 +20,7 @@ export default function Header({ navDispatch }) {
         </h1>
 
         <div className={styles.menuWrapper}>
-          <hr className={styles.divider} />
+          {/* <hr className={styles.divider} /> */}
           <ul className={styles.navList}>
             {sections.map((section, index) => (
               <li key={section} className={styles.navItem}>
@@ -38,7 +38,7 @@ export default function Header({ navDispatch }) {
               </li>
             ))}
           </ul>
-          <hr className={styles.divider} />
+          {/* <hr className={styles.divider} /> */}
         </div>
       </nav>
     </header>
