@@ -20,13 +20,7 @@ export default function About({ isAbout }) {
   return (
     <>
       {showAbout && (
-        <motion.div
-          className={styles.container}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
-        >
+        <div className={styles.container}>
           <h2>About Me</h2>
           <p>
             Experienced Full Stack Web Developer with a strong track record of
@@ -35,7 +29,7 @@ export default function About({ isAbout }) {
             React.js, Next.js, Vue.js, and TypeScript for crafting intuitive
             UIs, and in Node.js with Express for developing robust APIs.
           </p>
-        </motion.div>
+        </div>
       )}
     </>
   );

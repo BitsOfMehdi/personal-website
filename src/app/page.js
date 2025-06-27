@@ -39,10 +39,10 @@ export default function App() {
       <Header navState={navState} navDispatch={navDispatch} />
       <div className={styles.heroContainer}>
         <Hero isAbout={navState.isAbout} isWork={navState.isWork} />
-        {/* <SectionContainer isAbout={navState.isAbout} isWork={navState.isWork}> */}
-        <About isAbout={navState.isAbout} />
-        <Work isWork={navState.isWork} />
-        {/* </SectionContainer> */}
+        <SectionContainer isAbout={navState.isAbout} isWork={navState.isWork}>
+          <About isAbout={navState.isAbout} />
+          <Work isWork={navState.isWork} />
+        </SectionContainer>
       </div>
       {/* <SectionContainer id="contact">
         <h2>Contact</h2>
