@@ -1,4 +1,8 @@
 .container {
-  display: flex;
-  flex-direction: column;
+  max-height: calc(100vh - 50px);
+  max-width: 590px;
+  padding: 40px 10px 0 30px;
+  background-color: var(--color-primary);
+  border-radius: 0 0 7.5px 7.5px;
+  overflow: scroll;
 }

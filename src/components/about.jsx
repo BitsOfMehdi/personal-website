@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import styles from "@/components/about.module.css";
 
 export default function About({ isAbout }) {
@@ -10,7 +10,7 @@ export default function About({ isAbout }) {
     if (isAbout) {
       const timeout = setTimeout(() => {
         setShowAbout(true);
-      }, 300); // wait for Hero shift animation to complete
+      }, 100); // wait for Hero shift animation to complete
       return () => clearTimeout(timeout);
     } else {
       setShowAbout(false);
@@ -18,7 +18,7 @@ export default function About({ isAbout }) {
   }, [isAbout]);
 
   return (
-    <AnimatePresence>
+    <>
       {showAbout && (
         <motion.div
           className={styles.container}
@@ -37,6 +37,6 @@ export default function About({ isAbout }) {
           </p>
         </motion.div>
       )}
-    </AnimatePresence>
+    </>
   );
 }

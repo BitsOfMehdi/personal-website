@@ -1,13 +1,13 @@
 .header {
   position: sticky;
+  top: 0;
   z-index: 50;
   background: var(--background, #fff);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  /* margin-block-end: 20px; */
 }
 
 .navbar {
-  max-width: 1120px; /* ~7xl */
+  max-width: 1200px; /* ~7xl */
   height: 50px;
   margin: 0 auto;
   display: flex;
@@ -22,7 +22,6 @@
   cursor: pointer;
   transition: color 0.2s;
   margin-block: auto;
-  margin-inline-start: 10px;
 
   &:hover {
     color: var(--color-accent);

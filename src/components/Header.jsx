@@ -8,8 +8,8 @@ export default function Header({ navDispatch }) {
   const [activeSection, setActiveSection] = useState("");
 
   const handleHomeClick = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
     setActiveSection("");
+    navDispatch("home");
   };
 
   return (
@@ -18,11 +18,9 @@ export default function Header({ navDispatch }) {
         <h1 className={styles.logo} onClick={handleHomeClick}>
           Mehdi Mousavi
         </h1>
-
         <div className={styles.menuWrapper}>
-          {/* <hr className={styles.divider} /> */}
           <ul className={styles.navList}>
-            {sections.map((section, index) => (
+            {sections.map((section) => (
               <li key={section} className={styles.navItem}>
                 <button
                   onClick={() => {
@@ -38,7 +36,6 @@ export default function Header({ navDispatch }) {
               </li>
             ))}
           </ul>
-          {/* <hr className={styles.divider} /> */}
         </div>
       </nav>
     </header>

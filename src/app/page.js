@@ -24,6 +24,8 @@ const navReducer = (state, action) => {
       return { isHome: false, isAbout: false, isWork: true, isContact: false };
     case "contact":
       return { isHome: false, isAbout: false, isWork: false, isContact: true };
+    case "home":
+      return { isHome: false, isAbout: false, isWork: false, isContact: false };
     default:
       return state;
   }
@@ -36,11 +38,13 @@ export default function App() {
     <main className={styles.main}>
       <Header navState={navState} navDispatch={navDispatch} />
       <div className={styles.heroContainer}>
-        <Hero isAbout={navState.isAbout} />
+        <Hero isAbout={navState.isAbout} isWork={navState.isWork} />
+        {/* <SectionContainer isAbout={navState.isAbout} isWork={navState.isWork}> */}
         <About isAbout={navState.isAbout} />
+        <Work isWork={navState.isWork} />
+        {/* </SectionContainer> */}
       </div>
-      <Work />
-      <SectionContainer id="contact">
+      {/* <SectionContainer id="contact">
         <h2>Contact</h2>
         <p>Email: mehdi@example.com</p>
         <p>GitHub: github.com/yourusername</p>
@@ -50,7 +54,7 @@ export default function App() {
       <SectionContainer id="blog">
         <h2>Blog (Coming Soon)</h2>
         <p>This section will feature articles and tutorials in the future.</p>
-      </SectionContainer>
+      </SectionContainer> */}
     </main>
   );
 }
