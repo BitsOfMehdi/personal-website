@@ -4,9 +4,6 @@ import { useState, useReducer } from "react";
 import SectionContainer from "@/components/section-container";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
-import About from "@/components/about";
-import Work from "@/components/work";
-
 import styles from "@/styles/home.module.css";
 
 const initialState = {
@@ -33,16 +30,12 @@ const navReducer = (state, action) => {
 
 export default function App() {
   const [navState, navDispatch] = useReducer(navReducer, initialState);
-  console.log(navState);
   return (
     <main className={styles.main}>
       <Header navState={navState} navDispatch={navDispatch} />
       <div className={styles.heroContainer}>
         <Hero isAbout={navState.isAbout} isWork={navState.isWork} />
-        <SectionContainer isAbout={navState.isAbout} isWork={navState.isWork}>
-          <About isAbout={navState.isAbout} />
-          <Work isWork={navState.isWork} />
-        </SectionContainer>
+        <SectionContainer navState={navState} />
       </div>
       {/* <SectionContainer id="contact">
         <h2>Contact</h2>
