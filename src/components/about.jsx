@@ -12,7 +12,7 @@ export default function About() {
     if (navState.currentPage === "about") {
       const timeout = setTimeout(() => {
         setShowAbout(true);
-      }, 300); // wait for Hero shift animation to complete
+      }, 200); // wait for Hero shift animation to complete
       return () => clearTimeout(timeout);
     } else {
       setShowAbout(false);
@@ -28,7 +28,6 @@ export default function About() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{
             duration: 0.4,
-            // scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
           }}
         >
           <h2>About Me</h2>

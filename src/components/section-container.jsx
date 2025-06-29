@@ -19,8 +19,7 @@ export default function SectionContainer() {
         }}
       >
         <section className={classes.layout}>
-          {/* { <About />}
-          { <Work />} */}
+          {navState.currentPage === "work" && <Work />}
           {navState.currentPage === "about" && <About />}
         </section>
       </motion.div>
