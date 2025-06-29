@@ -12,7 +12,7 @@ export default function About() {
     if (navState.currentPage === "about") {
       const timeout = setTimeout(() => {
         setShowAbout(true);
-      }, 100); // wait for Hero shift animation to complete
+      }, 300); // wait for Hero shift animation to complete
       return () => clearTimeout(timeout);
     } else {
       setShowAbout(false);
@@ -22,7 +22,15 @@ export default function About() {
   return (
     <>
       {showAbout && (
-        <div className={styles.container}>
+        <motion.div
+          className={styles.container}
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.4,
+            // scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+          }}
+        >
           <h2>About Me</h2>
           <p>
             Experienced Full Stack Web Developer with a strong track record of
@@ -31,7 +39,7 @@ export default function About() {
             React.js, Next.js, Vue.js, and TypeScript for crafting intuitive
             UIs, and in Node.js with Express for developing robust APIs.
           </p>
-        </div>
+        </motion.div>
       )}
     </>
   );
