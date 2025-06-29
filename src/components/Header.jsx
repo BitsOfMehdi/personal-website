@@ -1,15 +1,17 @@
 "use client";
 import { useState } from "react";
+import { useNavControl } from "@/context/nav-control-context";
 import styles from "./header.module.css";
 
 const sections = ["about", "work", "contact", "blog"];
 
-export default function Header({ navDispatch }) {
+export default function Header() {
   const [activeSection, setActiveSection] = useState("");
+  const { navDispatch, navState } = useNavControl();
 
   const handleHomeClick = () => {
     setActiveSection("");
-    navDispatch("home");
+    navDispatch({ type: "home" });
   };
 
   return (
@@ -25,7 +27,7 @@ export default function Header({ navDispatch }) {
                 <button
                   onClick={() => {
                     setActiveSection(section);
-                    navDispatch(section);
+                    navDispatch({ type: section });
                   }}
                   className={`${styles.navLink} ${
                     activeSection === section ? styles.active : ""

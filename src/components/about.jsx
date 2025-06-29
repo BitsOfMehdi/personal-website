@@ -1,13 +1,15 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useNavControl } from "@/context/nav-control-context";
 import styles from "@/components/about.module.css";
 
-export default function About({ isAbout }) {
+export default function About() {
   const [showAbout, setShowAbout] = useState(false);
+  const { navState } = useNavControl();
 
   useEffect(() => {
-    if (isAbout) {
+    if (navState.currentPage === "about") {
       const timeout = setTimeout(() => {
         setShowAbout(true);
       }, 100); // wait for Hero shift animation to complete
@@ -15,7 +17,7 @@ export default function About({ isAbout }) {
     } else {
       setShowAbout(false);
     }
-  }, [isAbout]);
+  }, [navState.currentPage]);
 
   return (
     <>

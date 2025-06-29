@@ -1,14 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
-
+import { useNavControl } from "@/context/nav-control-context";
 import About from "@/components/about";
 import Work from "@/components/work";
 
 import classes from "@/components/section-container.module.css";
 
-export default function SectionContainer({ children, navState }) {
-  const { isWork, isAbout } = navState;
-  console.log("rendered from sections", isAbout, isWork);
+export default function SectionContainer() {
+  const { navState } = useNavControl();
   return (
     <>
       <motion.div
@@ -20,9 +19,9 @@ export default function SectionContainer({ children, navState }) {
         }}
       >
         <section className={classes.layout}>
-          {isAbout && <About />}
-          {isWork && <Work />}
-          <About />
+          {/* { <About />}
+          { <Work />} */}
+          {navState.currentPage === "about" && <About />}
         </section>
       </motion.div>
     </>
