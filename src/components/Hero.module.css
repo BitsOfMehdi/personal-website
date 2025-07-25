@@ -1,22 +1,19 @@
 .heroSection {
-  min-height: 100vh;
+  min-height: calc(100vh - 50px);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 1rem;
+  background-color: var(--color-background-container);
+  border-radius: 0 0 7.5px 7.5px;
+  width: 100%; /* Start full width of the wrapper */
 }
 
 .heading {
   font-size: 2.25rem; /* ~text-4xl */
   font-weight: bold;
   color: #111;
-}
-
-@media (min-width: 768px) {
-  .heading {
-    font-size: 3.75rem; /* ~text-6xl */
-  }
 }
 
 .description {

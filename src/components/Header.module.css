@@ -7,7 +7,7 @@
 }
 
 .navbar {
-  max-width: 1120px; /* ~7xl */
+  max-width: 1200px; /* ~7xl */
   height: 50px;
   margin: 0 auto;
   display: flex;
@@ -22,11 +22,10 @@
   cursor: pointer;
   transition: color 0.2s;
   margin-block: auto;
-  margin-inline-start: 10px;
-}
 
-.logo:hover {
-  color: var(--accent, #1e90ff);
+  &:hover {
+    color: var(--color-accent);
+  }
 }
 
 .menuWrapper {
@@ -35,13 +34,6 @@
   justify-content: flex-end;
   flex-grow: 1;
   max-width: 500px;
-}
-
-.divider {
-  display: flex;
-  flex-grow: 1;
-  max-width: 50px;
-  border-top: 1px solid var(--muted, #ccc);
 }
 
 .navList {
@@ -65,26 +57,20 @@
   display: inline-block;
   transition: all 0.2s ease-in-out;
   color: var(--muted, #888);
-  text-decoration: none;
-}
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
 
-.navLink:hover {
-  color: var(--color-accent);
+  &:hover {
+    cursor: pointer;
+    color: var(--color-accent);
+  }
 }
 
 .active {
   font-weight: bold;
   font-size: 18px;
   color: var(--color-accent);
-  /* transform: translateY(2px); */
-}
-
-.dot {
-  margin-inline: 4px;
-  color: var(--accent);
-  position: relative;
-  top: 1px;
-  pointer-events: none;
 }
 
 @media (max-width: 768px) {
