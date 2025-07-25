@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useNavControl } from "@/context/nav-control-context";
-import styles from "./header.module.css";
+import styles from "./Header.module.css";
 
 const sections = ["about", "work", "contact", "blog"];
 

@@ -2,7 +2,7 @@ import * as motion from "motion/react-client";
 
 import { useNavControl } from "@/context/nav-control-context";
 
-import styles from "./hero.module.css";
+import styles from "./Hero.module.css";
 
 export default function Hero() {
   const { navState } = useNavControl();
