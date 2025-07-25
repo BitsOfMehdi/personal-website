@@ -5,8 +5,7 @@ import { useNavControl } from "@/context/nav-control-context";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
-  const { navState } = useNavControl();
-  console.log("from hero:", navState, navState.currentPage == "home");
+  const { navState, navDispatch } = useNavControl();
 
   return (
     <div>
@@ -27,9 +26,12 @@ export default function Hero() {
           & Tailwind CSS.
         </p>
         <div className={styles.buttonWrapper}>
-          <a href="#projects" className={styles.ctaButton}>
+          <button
+            className={styles.ctaButton}
+            onClick={() => navDispatch({ type: "work" })}
+          >
             View My Work
-          </a>
+          </button>
         </div>
       </motion.section>
     </div>
