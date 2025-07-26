@@ -39,7 +39,7 @@
 }
 
 .ctaButton {
-  background-color: #2563eb; /* blue-600 */
+  background-color: var(--color-dark); /* blue-600 */
   color: white;
   font-weight: 500;
   padding: 0.5rem 1.5rem;

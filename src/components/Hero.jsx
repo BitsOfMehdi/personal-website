@@ -13,7 +13,11 @@ export default function Hero() {
         className={styles.heroSection}
         initial={{ width: "1200px" }}
         animate={{
-          width: navState.currentPage === "home" ? "1200px" : "600px",
+          width:
+            navState.currentPage === "home" ||
+            navState.currentPage === "contact"
+              ? "1200px"
+              : "600px",
         }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         style={{
