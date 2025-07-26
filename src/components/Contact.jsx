@@ -1,16 +1,41 @@
+import { Mail, Github, Linkedin } from "lucide-react";
 import Modal from "./Modal";
 import { useNavControl } from "@/context/nav-control-context";
+import styles from "./Contact.module.css";
 
-function Contact({ onClose }) {
-  const { navState } = useNavControl();
+function Contact({}) {
+  const { navState, navDispatch } = useNavControl();
   const isOpen = navState.currentPage === "contact";
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose}>
-      <h2>Contact Me</h2>
-      <h3>Email me at: example@example.com</h3>
-      <h3>Follow me on GitHub: github.com/yourusername</h3>
-      <h3>Connect on LinkedIn: linkedin.com/in/yourprofile</h3>
+    <Modal isOpen={isOpen} onClose={() => navDispatch({ type: "home" })}>
+      <h2 className={styles.centeredTitle}>Let’s Connect</h2>
+      <div className={styles.iconRow}>
+        <a
+          className={styles.icons}
+          href="mailto:bitsofmehdi@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Mail size={48} />
+        </a>
+        <a
+          className={styles.icons}
+          href="https://github.com/BitsOfMehdi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Github size={48} />
+        </a>
+        <a
+          className={styles.icons}
+          href="https://www.linkedin.com/in/mehdi-mousavi-dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Linkedin size={48} />
+        </a>
+      </div>
     </Modal>
   );
 }

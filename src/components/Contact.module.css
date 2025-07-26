@@ -1,0 +1,19 @@
+.centeredTitle {
+  text-align: center;
+}
+
+.iconRow {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.icons {
+  color: var(--color-dark);
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}

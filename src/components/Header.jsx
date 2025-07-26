@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavControl } from "@/context/nav-control-context";
 import styles from "./Header.module.css";
 
@@ -13,6 +13,12 @@ export default function Header() {
     setActiveSection("");
     navDispatch({ type: "home" });
   };
+
+  useEffect(() => {
+    if (navState.isModalClosed) {
+      setActiveSection("");
+    }
+  }, [navState.isModalClosed]);
 
   return (
     <header className={styles.header}>

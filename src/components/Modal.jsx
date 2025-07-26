@@ -2,24 +2,23 @@ import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { useNavControl } from "@/context/nav-control-context";
 
-export default function Modal({ isOpen, children }) {
+export default function Modal({ isOpen, onClose, children }) {
   const { navState, navDispatch } = useNavControl();
   // Prevent background scroll when modal is open
 
   const handleClose = () => {
-    if (navState.currentPage === "contact") {
-      navDispatch({ type: "home" });
-    }
+    navDispatch({ type: "toggleModal" });
+    onClose();
   };
 
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
+      navDispatch({ type: "toggleModal" });
       return () => {
         document.body.style.overflow = "";
       };
     }
-    console.log(isOpen ? "Modal opened" : "Modal closed");
   }, [isOpen]);
 
   if (!isOpen) return null;
