@@ -19,8 +19,10 @@ const navReducer = (state, action) => {
       return { ...state, currentPage: "about" };
     case "blog":
       return { ...state, currentPage: "blog" };
-    case "toggleModal":
-      return { ...state, isModalClosed: !state.isModalClosed };
+    case "closeModal":
+      return { ...state, isModalClosed: true, currentPage: "home" };
+    case "openModal":
+      return { ...state, isModalClosed: false };
     default:
       return state;
   }
