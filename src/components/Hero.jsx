@@ -26,8 +26,8 @@ export default function Hero() {
       >
         <h1 className={styles.heading}>Hey, I'm Mehdi Mousavi</h1>
         <p className={styles.description}>
-          Frontend Engineer — crafting fast, modern websites with React, Next.js
-          & Tailwind CSS.
+          Frontend Engineer — Building fast, scalable web apps with React,
+          Next.js, and Node.js.
         </p>
         <div className={styles.buttonWrapper}>
           <button

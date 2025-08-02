@@ -35,7 +35,6 @@ export function NavControlProvider({ children }) {
 
   return (
     <NavControlContext.Provider value={{ navState, navDispatch }}>
-      {console.log(navState)}
       {children}
     </NavControlContext.Provider>
   );

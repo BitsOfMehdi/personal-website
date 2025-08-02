@@ -12,7 +12,7 @@ export default function SectionContainer() {
     <>
       <motion.div
         initial={{ width: 0 }}
-        animate={{ width: 590 }}
+        animate={{ width: 600 }}
         transition={{ duration: 1, ease: "easeInOut" }}
         style={{
           transformOrigin: "right",
