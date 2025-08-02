@@ -1,7 +1,7 @@
 .container {
   max-height: calc(100vh - 50px);
-  max-width: 590px;
-  padding-inline: 30px;
+  max-width: 1000px;
+  margin-inline: 4rem;
   padding-block: 100px 0;
 }
 

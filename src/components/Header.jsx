@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavControl } from "@/context/nav-control-context";
 import styles from "./Header.module.css";
 
-const sections = ["about", "work", "contact", "blog"];
+const sections = ["about", "work", "contact"];
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState("");

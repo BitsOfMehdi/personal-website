@@ -2,7 +2,7 @@
   max-height: calc(100vh - 50px);
   max-width: 590px;
   display: flex;
-  padding-inline: 30px;
+  margin-inline: 50px;
 }
 
 .title {

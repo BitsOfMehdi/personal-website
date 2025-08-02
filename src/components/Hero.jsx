@@ -17,14 +17,14 @@ export default function Hero() {
             navState.currentPage === "home" ||
             navState.currentPage === "contact"
               ? "1200px"
-              : "600px",
+              : "500px",
         }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         style={{
           transformOrigin: "left", // Key: shrink from the right
         }}
       >
-        <h1 className={styles.heading}>Hey, I'm Mehdi Mousavi</h1>
+        <h1 className={styles.heading}>Hey, I'm Mehdi</h1>
         <p className={styles.description}>
           Frontend Engineer — Building fast, scalable web apps with React,
           Next.js, and Node.js.

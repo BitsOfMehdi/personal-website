@@ -6,7 +6,6 @@
   justify-content: center;
   text-align: center;
   background-color: var(--color-background-container);
-  border-radius: 0 0 7.5px 7.5px;
   width: 100%; /* Start full width of the wrapper */
 }
 
@@ -17,21 +16,10 @@
 }
 
 .description {
-  margin-top: 1rem;
   font-size: 1.125rem; /* ~text-lg */
   max-width: 36rem;
-  margin-left: auto;
-  margin-right: auto;
   color: #4b5563; /* gray-600 */
-
-  /* dark mode fallback */
-  @media (prefers-color-scheme: dark) {
-    color: #d1d5db; /* gray-300 */
-  }
-
-  @media (min-width: 768px) {
-    font-size: 1.25rem; /* ~text-xl */
-  }
+  margin-inline: 1rem;
 }
 
 .buttonWrapper {
