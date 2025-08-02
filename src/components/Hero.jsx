@@ -1,8 +1,8 @@
+import Image from "next/image";
 import * as motion from "motion/react-client";
-
 import { useNavControl } from "@/context/nav-control-context";
-
 import styles from "./Hero.module.css";
+import avatar from "@/public/avatar.png";
 
 export default function Hero() {
   const { navState, navDispatch } = useNavControl();
@@ -24,6 +24,15 @@ export default function Hero() {
           transformOrigin: "left", // Key: shrink from the right
         }}
       >
+        <div className={styles.avatarWrapper}>
+          <Image
+            src={avatar}
+            alt="Mehdi Mousavi"
+            className={styles.avatar}
+            width={200}
+            height={200}
+          />
+        </div>
         <h1 className={styles.heading}>Hey, I'm Mehdi</h1>
         <p className={styles.description}>
           Frontend Engineer — Building fast, scalable web apps with React,

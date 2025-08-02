@@ -39,3 +39,9 @@
 .ctaButton:hover {
   background-color: #1e40af; /* blue-700 */
 }
+
+.avatarWrapper {
+  max-height: 200px;
+  border-radius: 2px;
+  overflow: hidden;
+}

@@ -1,0 +1,21 @@
+.footer {
+  padding: 1rem 0;
+  text-align: center;
+  max-width: 1200px;
+  margin-inline: auto;
+  z-index: 50; /* much higher z-index */
+  position: fixed; /* fixed overlay */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw; /* full width */
+  pointer-events: none; /* optional: let clicks pass through if needed */
+}
+
+.footerText {
+  margin: 0;
+  color: var(--color-text-secondary);
+  pointer-events: auto; /* allow interaction with text if needed */
+  font-size: 12px;
+  color: #4b5563;
+}
