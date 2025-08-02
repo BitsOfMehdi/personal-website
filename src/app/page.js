@@ -10,15 +10,15 @@ import styles from "@/styles/home.module.css";
 export default function App() {
   return (
     <NavControlProvider>
+      <Header />
       <main className={styles.main}>
-        <Header />
         <div className={styles.heroContainer}>
           <Hero />
           <SectionContainer />
           <Contact />
         </div>
-        <Footer />
       </main>
+      <Footer />
     </NavControlProvider>
   );
 }
