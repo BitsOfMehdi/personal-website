@@ -1,5 +1,27 @@
 .container {
   max-height: calc(100vh - 50px);
-  max-width: 590px;
-  padding: 40px 10px 0 30px;
+  max-width: 1000px;
+  margin-inline: 4rem;
+  padding-block: 100px 0;
+}
+
+.jobItem {
+  margin-bottom: 2rem;
+}
+
+.jobItem h3 {
+  margin-block: 0;
+}
+
+.jobMeta {
+  margin-block: 0;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.jobDescription {
+  margin-block: 0;
+  color: var(--color-muted);
+  text-align: justify;
+  font-size: 14px;
 }

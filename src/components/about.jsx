@@ -30,14 +30,16 @@ export default function About() {
             duration: 0.4,
           }}
         >
-          <h2>About Me</h2>
-          <p>
-            Experienced Full Stack Web Developer with a strong track record of
-            building responsive, scalable, and maintainable applications across
-            the frontend and backend. Proficient in JavaScript, and skilled in
-            React.js, Next.js, Vue.js, and TypeScript for crafting intuitive
-            UIs, and in Node.js with Express for developing robust APIs.
-          </p>
+          <div className={styles.contentShift}>
+            <h2 className={styles.title}>About Me</h2>
+            <p className={styles.description}>
+              I'm a Frontend Engineer with 7+ years of experience building
+              high-performance web applications using React, Next.js, and
+              Node.js. I focus on clean architecture, performance, and creating
+              user-friendly interfaces. I enjoy solving complex problems,
+              collaborating across teams, and building systems that scale.
+            </p>
+          </div>
         </motion.div>
       )}
     </>

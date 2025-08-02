@@ -4,31 +4,23 @@ export const workHistory = [
     company: "Radio Free Asia",
     date: "Aug 2023 - May 2025",
     location: "Washington, D.C.",
-    experiences: [
-      "Led migration of 17 websites to React/Next.js improving performance and editorial control.",
-      "Built 40+ reusable React components in ArcXP CMS.",
-      "Implemented forms with AWS Lambda integration, pagination logic, and custom asset delivery via S3.",
-      "Worked on RESTful and GraphQL API integration and participated in CI/CD pipeline.",
-    ],
+    description:
+      "At Radio Free Asia, I led the modernization of 17 news websites, migrating them from outdated stacks to fast, scalable React/Next.js platforms. This project wasn’t just technical; it was about empowering editors with tools that made their publishing workflow 80% faster. I built reusable components, optimized content feeds, and helped shape our frontend architecture alongside DevOps and backend teams. It was an exciting challenge that deepened my passion for building systems that scale gracefully while serving real users.",
   },
   {
     title: "Full Stack Web Developer",
     company: "Geico Insurance",
     date: "May 2020 - June 2023",
     location: "Chevy Chase, MD",
-    experiences: [
-      "Built shared Redux state layers, optimized forms, and integrated GraphQL APIs.",
-      "Collaborated cross-functionally and improved frontend SEO/accessibility.",
-    ],
+    description:
+      "At Geico, I built tools that improved the quote experience by guiding users through personalized forms and efficient workflows. I worked across React, Node.js, and GraphQL to ensure data accuracy, speed, and accessibility. Always aiming to simplify complex insurance flows for real people.",
   },
   {
     title: "Frontend Web Developer",
     company: "First Citizens Bank",
     date: "Mar 2018 - Apr 2020",
     location: "Fairfax, VA",
-    experiences: [
-      "Developed websites using JavaScript stack, optimized for SEO and accessibility.",
-      "Collaborated with backend devs and participated in Agile processes.",
-    ],
+    description:
+      "I helped build internal banking tools using JavaScript and Node.js, integrating with backend services and relational databases. Working in Agile teams, I contributed to UI development and learned how to ship features that supported both customers and banking staff.",
   },
 ];

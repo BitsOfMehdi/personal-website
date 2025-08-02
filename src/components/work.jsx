@@ -31,7 +31,7 @@ export default function Work() {
             duration: 0.4,
           }}
         >
-          <div className={styles.container}>
+          <div>
             {workHistory.map((el, i) => {
               return (
                 <div className={styles.jobItem} key={i}>
@@ -39,11 +39,7 @@ export default function Work() {
                   <p
                     className={styles.jobMeta}
                   >{`${el.date}, ${el.location}`}</p>
-                  <ul>
-                    {el.experiences.map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
+                  <p className={styles.jobDescription}>{el.description}</p>
                 </div>
               );
             })}

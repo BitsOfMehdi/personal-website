@@ -12,8 +12,8 @@ export default function SectionContainer() {
     <>
       <motion.div
         initial={{ width: 0 }}
-        animate={{ width: 590 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
+        animate={{ width: 1000 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
         style={{
           transformOrigin: "right",
         }}
