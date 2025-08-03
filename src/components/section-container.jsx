@@ -12,8 +12,8 @@ export default function SectionContainer() {
 
   return (
     <motion.div
-      initial={{ width: 0 }}
-      animate={{ width: isMobile ? "100vw" : 1000 }}
+      initial={{ width: 0, height: 0, display: "none" }}
+      animate={{ width: isMobile ? "100vw" : 1000, display: "block" }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
       style={{
         transformOrigin: "right",

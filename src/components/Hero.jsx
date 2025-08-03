@@ -34,7 +34,9 @@ export default function Hero() {
           transformOrigin: "left",
         }}
       >
-        {!isDesktop && navState.currentPage !== "home" ? (
+        {!isDesktop &&
+        navState.currentPage !== "home" &&
+        navState.currentPage !== "contact" ? (
           <motion.div
             className={styles.content}
             initial={{ opacity: 1 }}
