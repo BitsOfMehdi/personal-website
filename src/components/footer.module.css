@@ -17,6 +17,7 @@
   color: var(--color-text-secondary);
   pointer-events: auto; /* allow interaction with text if needed */
   font-size: 12px;
+  line-height: 1rem;
   color: #4b5563;
 }
 

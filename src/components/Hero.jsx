@@ -34,28 +34,63 @@ export default function Hero() {
           transformOrigin: "left",
         }}
       >
-        <div className={styles.avatarWrapper}>
-          <Image
-            src={avatar}
-            alt="Mehdi Mousavi"
-            className={styles.avatar}
-            width={200}
-            height={200}
-          />
-        </div>
-        <h1 className={styles.heading}>Hey, I'm Mehdi</h1>
-        <p className={styles.description}>
-          Frontend Engineer — Building fast, scalable web apps with React,
-          Next.js, and Node.js.
-        </p>
-        <div className={styles.buttonWrapper}>
-          <button
-            className={styles.ctaButton}
-            onClick={() => navDispatch({ type: "work" })}
+        {!isDesktop && navState.currentPage !== "home" ? (
+          <motion.div
+            className={styles.content}
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 0 }}
+            exit={{ opacity: 1 }}
+            transition={{ duration: 0.2, ease: "linear" }}
           >
-            View My Work
-          </button>
-        </div>
+            <div className={styles.avatarWrapper}>
+              <Image
+                src={avatar}
+                alt="Mehdi Mousavi"
+                className={styles.avatar}
+                width={200}
+                height={200}
+              />
+            </div>
+            <h1 className={styles.heading}>Hey, I'm Mehdi</h1>
+            <p className={styles.description}>
+              Frontend Engineer — Building fast, scalable web apps with React,
+              Next.js, and Node.js.
+            </p>
+            <div className={styles.buttonWrapper}>
+              <button
+                className={styles.ctaButton}
+                onClick={() => navDispatch({ type: "work" })}
+              >
+                View My Work
+              </button>
+            </div>
+          </motion.div>
+        ) : (
+          <div className={styles.content}>
+            <div className={styles.avatarWrapper}>
+              <Image
+                src={avatar}
+                alt="Mehdi Mousavi"
+                className={styles.avatar}
+                width={200}
+                height={200}
+              />
+            </div>
+            <h1 className={styles.heading}>Hey, I'm Mehdi</h1>
+            <p className={styles.description}>
+              Frontend Engineer — Building fast, scalable web apps with React,
+              Next.js, and Node.js.
+            </p>
+            <div className={styles.buttonWrapper}>
+              <button
+                className={styles.ctaButton}
+                onClick={() => navDispatch({ type: "work" })}
+              >
+                View My Work
+              </button>
+            </div>
+          </div>
+        )}
       </motion.section>
     </div>
   );
