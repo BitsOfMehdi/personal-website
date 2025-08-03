@@ -7,15 +7,21 @@ import { useMediaQuery } from "@/utility/useMediaQuery"; // adjust path as neede
 
 export default function Hero() {
   const { navState, navDispatch } = useNavControl();
-  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const isLarge = useMediaQuery("(min-width: 1200px)");
+  const isMedium = useMediaQuery("(min-width: 938px) and (max-width: 1199px)");
+  const isSmall = useMediaQuery("(max-width: 767px)");
 
-  // Responsive width logic
   let targetWidth;
-  if (isDesktop) {
+  if (isLarge) {
     targetWidth =
       navState.currentPage === "home" || navState.currentPage === "contact"
         ? "1200px"
         : "500px";
+  } else if (isMedium) {
+    targetWidth =
+      navState.currentPage === "home" || navState.currentPage === "contact"
+        ? "100vw"
+        : "400px";
   } else {
     targetWidth =
       navState.currentPage === "home" || navState.currentPage === "contact"
@@ -27,14 +33,15 @@ export default function Hero() {
     <div>
       <motion.section
         className={styles.heroSection}
-        initial={{ width: isDesktop ? "1200px" : "100vw" }}
+        initial={{ width: isLarge ? "1200px" : "100vw" }}
         animate={{ width: targetWidth }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         style={{
           transformOrigin: "left",
         }}
       >
-        {!isDesktop &&
+        {!isLarge &&
+        !isMedium &&
         navState.currentPage !== "home" &&
         navState.currentPage !== "contact" ? (
           <motion.div

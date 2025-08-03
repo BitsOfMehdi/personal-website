@@ -4,3 +4,9 @@
   background-color: var(--color-primary);
   color: #000;
 }
+
+@media (max-width: 938px) {
+  .layout {
+    margin-inline: auto;
+  }
+}
