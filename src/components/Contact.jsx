@@ -8,7 +8,12 @@ function Contact({}) {
   const isOpen = navState.currentPage === "contact";
 
   return (
-    <Modal isOpen={isOpen} onClose={() => navDispatch({ type: "home" })}>
+    <Modal
+      isOpen={isOpen}
+      modalClassName={styles.modal}
+      overlayClassName={styles.overlay}
+      onClose={() => navDispatch({ type: "home" })}
+    >
       <h2 className={styles.centeredTitle}>Let’s Connect</h2>
       <div className={styles.iconRow}>
         <a

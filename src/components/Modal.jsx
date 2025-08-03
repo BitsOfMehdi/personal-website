@@ -3,7 +3,14 @@ import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavControl } from "@/context/nav-control-context";
 
-export default function Modal({ isOpen, onClose, children }) {
+export default function Modal({
+  isOpen,
+  onClose,
+  children,
+  modalClassName,
+  overlayClassName,
+  direction = "top", // default direction
+}) {
   const { navState, navDispatch } = useNavControl();
   const [mounted, setMounted] = useState(false);
 
@@ -28,6 +35,32 @@ export default function Modal({ isOpen, onClose, children }) {
 
   if (!mounted) return null;
 
+  // Determine initial/exit values based on direction
+  let initial, animate, exit;
+  switch (direction) {
+    case "bottom":
+      initial = { y: "100vh", opacity: 0 };
+      animate = { y: 0, opacity: 1 };
+      exit = { y: "-100vh", opacity: 0 };
+      break;
+    case "left":
+      initial = { x: "-100vw", opacity: 0 };
+      animate = { x: 0, opacity: 1 };
+      exit = { x: "100vw", opacity: 0 };
+      break;
+    case "right":
+      initial = { x: "100vw", opacity: 0 };
+      animate = { x: 0, opacity: 1 };
+      exit = { x: "-100vw", opacity: 0 };
+      break;
+    case "top":
+    default:
+      initial = { y: "-100vh", opacity: 0 };
+      animate = { y: 0, opacity: 1 };
+      exit = { y: "100vh", opacity: 0 };
+      break;
+  }
+
   return createPortal(
     <AnimatePresence>
       {isOpen && (
@@ -36,31 +69,15 @@ export default function Modal({ isOpen, onClose, children }) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.25 }} // optional
-          style={{
-            position: "fixed",
-            inset: 0,
-            background: "rgba(0,0,0,0.5)",
-            zIndex: 1000,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
+          className={overlayClassName}
           onClick={handleClose}
         >
           <motion.div
-            initial={{ y: "-100vh", opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: "100vh", opacity: 0 }}
+            initial={initial}
+            animate={animate}
+            exit={exit}
             transition={{ type: "spring", stiffness: 250, damping: 35 }}
-            style={{
-              background: "#fff",
-              borderRadius: "8px",
-              padding: "2rem",
-              minWidth: "300px",
-              minHeight: "150px",
-              boxShadow: "0 2px 16px rgba(0,0,0,0.2)",
-              position: "relative",
-            }}
+            className={modalClassName}
             onClick={(e) => e.stopPropagation()}
           >
             {children}
