@@ -20,7 +20,17 @@
 }
 
 .contentShift {
-  margin-top: 30vh; /* push content down by 1/3 of viewport height */
+  margin-block-start: 30vh; /* push content down by 1/3 of viewport height */
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 767px) {
+  .contentShift {
+    margin-block-start: 10vh;
+  }
+
+  .title {
+    margin-block-end: 0;
+  }
 }
