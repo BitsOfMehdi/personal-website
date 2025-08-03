@@ -6,7 +6,7 @@
 }
 
 .jobItem {
-  margin-bottom: 2rem;
+  padding-block-end: 2rem;
 }
 
 .jobItem h3 {
@@ -24,4 +24,11 @@
   color: var(--color-muted);
   text-align: justify;
   font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-block: 50px 0;
+    max-height: none;
+  }
 }

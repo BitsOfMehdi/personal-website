@@ -14,6 +14,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  transition: height 0.2s;
 }
 
 .logo {
@@ -22,6 +23,7 @@
   cursor: pointer;
   transition: color 0.2s;
   margin-block: auto;
+  margin-inline-start: 10px;
 
   &:hover {
     color: var(--color-accent);
@@ -74,13 +76,21 @@
 }
 
 @media (max-width: 768px) {
-  .divider {
-    display: none;
-  }
-}
-
-@media (max-width: 567px) {
   .navbar {
     flex-direction: column;
+    align-items: stretch;
+    height: 4rem;
+    padding: 0.5rem 0;
+    width: 100%;
+  }
+  .logo {
+    margin-bottom: 0.5rem;
+    margin-block: 0;
+    text-align: center;
+  }
+  .menuWrapper {
+    justify-content: center;
+    width: 100%;
+    max-width: none;
   }
 }
