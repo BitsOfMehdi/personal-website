@@ -1,10 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
 import { useNavControl } from "@/context/nav-control-context";
-import About from "@/components/about";
-import Work from "@/components/work";
+import About from "@/components/About";
+import Work from "@/components/Work";
 import { useMediaQuery } from "@/utility/useMediaQuery";
-import classes from "@/components/section-container.module.css";
+import classes from "@/components/SectionContainer.module.css";
 
 export default function SectionContainer() {
   const { navState } = useNavControl();

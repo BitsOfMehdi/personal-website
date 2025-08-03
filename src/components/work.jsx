@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavControl } from "@/context/nav-control-context";
 import { workHistory } from "@/app/api/work";
-import styles from "@/components/work.module.css";
+import styles from "@/components/Work.module.css";
 
 export default function Work() {
   const [showWork, setShowWork] = useState(false);

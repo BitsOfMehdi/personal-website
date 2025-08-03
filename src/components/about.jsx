@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavControl } from "@/context/nav-control-context";
-import styles from "@/components/about.module.css";
+import styles from "@/components/About.module.css";
 
 export default function About() {
   const [showAbout, setShowAbout] = useState(false);
