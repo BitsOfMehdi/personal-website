@@ -32,3 +32,25 @@
     max-height: none;
   }
 }
+
+@media (max-height: 767px) {
+  .container {
+    padding-block: 30px 0;
+    margin-inline: 2rem;
+  }
+
+  .jobItem {
+    padding-block-end: 0.5rem;
+  }
+
+  .jobItem h3 {
+    font-size: 16px;
+  }
+
+  .jobMeta {
+    font-size: 14px;
+  }
+  .jobDescription {
+    font-size: 13px;
+  }
+}
