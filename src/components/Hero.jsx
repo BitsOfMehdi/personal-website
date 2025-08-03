@@ -3,25 +3,35 @@ import * as motion from "motion/react-client";
 import { useNavControl } from "@/context/nav-control-context";
 import styles from "./Hero.module.css";
 import avatar from "@/public/avatar.png";
+import { useMediaQuery } from "@/utility/useMediaQuery"; // adjust path as needed
 
 export default function Hero() {
   const { navState, navDispatch } = useNavControl();
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+
+  // Responsive width logic
+  let targetWidth;
+  if (isDesktop) {
+    targetWidth =
+      navState.currentPage === "home" || navState.currentPage === "contact"
+        ? "1200px"
+        : "500px";
+  } else {
+    targetWidth =
+      navState.currentPage === "home" || navState.currentPage === "contact"
+        ? "100vw"
+        : "0px";
+  }
 
   return (
     <div>
       <motion.section
         className={styles.heroSection}
-        initial={{ width: "1200px" }}
-        animate={{
-          width:
-            navState.currentPage === "home" ||
-            navState.currentPage === "contact"
-              ? "1200px"
-              : "500px",
-        }}
+        initial={{ width: isDesktop ? "1200px" : "100vw" }}
+        animate={{ width: targetWidth }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         style={{
-          transformOrigin: "left", // Key: shrink from the right
+          transformOrigin: "left",
         }}
       >
         <div className={styles.avatarWrapper}>

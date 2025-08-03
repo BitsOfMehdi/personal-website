@@ -19,3 +19,8 @@
   font-size: 12px;
   color: #4b5563;
 }
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 0.5rem 0;
+  }

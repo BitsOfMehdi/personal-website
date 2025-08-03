@@ -14,6 +14,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  transition: height 0.2s;
 }
 
 .logo {
@@ -74,13 +75,21 @@
 }
 
 @media (max-width: 768px) {
-  .divider {
-    display: none;
-  }
-}
-
-@media (max-width: 567px) {
   .navbar {
     flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    padding: 0.5rem 0;
+    width: 100%;
+  }
+  .logo {
+    margin-bottom: 0.5rem;
+    margin-block: 0;
+    text-align: center;
+  }
+  .menuWrapper {
+    justify-content: center;
+    width: 100%;
+    max-width: none;
   }
 }

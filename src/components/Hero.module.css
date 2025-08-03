@@ -6,7 +6,9 @@
   justify-content: center;
   text-align: center;
   background-color: var(--color-background-container);
-  width: 100%; /* Start full width of the wrapper */
+  max-width: 1200px;
+  transition: max-width 0.5s;
+  margin-inline: auto;
 }
 
 .heading {
@@ -44,4 +46,22 @@
   max-height: 200px;
   border-radius: 2px;
   overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .heroSection {
+    max-width: 100vw;
+    min-width: 0;
+    margin-block-start: -50px;
+    height: 100vh;
+  }
+
+  .heading {
+    margin-block-start: 0.5rem;
+    margin-block-end: 0;
+  }
+
+  .description {
+    margin-block: 0;
+  }
 }
