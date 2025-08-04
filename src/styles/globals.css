@@ -11,27 +11,12 @@
   --color-primary: #9eafb6;
   --color-accent: #c4772a;
   --color-dark: #233349;
-
-  /* Optional: easings, breakpoints, spacing */
-  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
-  --breakpoint-3xl: 1920px;
-}
-
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: #233349;
-    --color-dark: #edd6cc;
-    /* You can override others as needed */
-  }
 }
 
 /* Base Styles */
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--color-background);
-  color: var(--color-dark);
   font-family: var(--font-sans);
   line-height: 1.6;
 }
