@@ -1,22 +1,19 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useNavControl } from "@/context/nav-control-context";
 import styles from "./Header.module.css";
 
 const sections = ["about", "work", "contact"];
 
 export default function Header() {
-  const [activeSection, setActiveSection] = useState("");
-  const { navDispatch, navState } = useNavControl();
+  const { navState, navDispatch } = useNavControl();
 
   const handleHomeClick = () => {
-    setActiveSection("");
     navDispatch({ type: "home" });
   };
 
   useEffect(() => {
     if (navState.isModalClosed) {
-      setActiveSection("");
     }
   }, [navState.isModalClosed]);
 
@@ -32,11 +29,10 @@ export default function Header() {
               <li key={section} className={styles.navItem}>
                 <button
                   onClick={() => {
-                    setActiveSection(section);
                     navDispatch({ type: section });
                   }}
                   className={`${styles.navLink} ${
-                    activeSection === section ? styles.active : ""
+                    navState.currentPage === section ? styles.active : ""
                   }`}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
