@@ -2,7 +2,7 @@ export const workHistory = [
   {
     title: "Frontend Web Developer",
     company: "Radio Free Asia",
-    date: "Aug 2023 - May 2025",
+    date: "Aug 2023 - Present",
     location: "Washington, D.C.",
     description:
       "At Radio Free Asia, I led the modernization of 17 news websites, migrating them from outdated stacks to fast, scalable React/Next.js platforms. This project wasn’t just technical; it was about empowering editors with tools that made their publishing workflow 80% faster. I built reusable components, optimized content feeds, and helped shape our frontend architecture alongside DevOps and backend teams. It was an exciting challenge that deepened my passion for building systems that scale gracefully while serving real users.",

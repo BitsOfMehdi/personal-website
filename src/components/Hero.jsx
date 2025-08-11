@@ -9,7 +9,7 @@ export default function Hero() {
   const { navState, navDispatch } = useNavControl();
   const isLarge = useMediaQuery("(min-width: 1200px)");
   const isMedium = useMediaQuery("(min-width: 938px) and (max-width: 1199px)");
-  const isSmall = useMediaQuery("(max-width: 767px)");
+  // const isSmall = useMediaQuery("(max-width: 767px)");
 
   let targetWidth;
   if (isLarge) {
