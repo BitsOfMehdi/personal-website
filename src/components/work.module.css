@@ -3,7 +3,7 @@
   max-width: 550px;
   margin-inline: 4rem;
   padding-block: 2rem 0;
-  position: absolute;
+  position: relative; /* participate in document flow */
   overflow: hidden;
 }
 
@@ -110,7 +110,18 @@
   .container {
     padding-block: 50px 0;
     max-height: none;
+    /* mobile: ensure natural height (content-driven) */
+    min-height: auto;
   }
+
+  .container ul {
+    padding-inline-start: 0;
+  }
+
+  .careerStory {
+    padding-block-end: 1rem;
+  }
+    
 }
 
 @media (max-height: 767px) {
