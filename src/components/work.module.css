@@ -1,22 +1,28 @@
 .container {
   max-height: calc(100vh - 50px);
-  max-width: 1000px;
+  max-width: 550px;
   margin-inline: 4rem;
   padding-block: 100px 0;
+  position: absolute;
+  overflow: hidden;
 }
 
 .jobItem {
-  padding-block-end: 2rem;
+  padding-block-end: 1rem;
 }
 
 .jobItem h3 {
   margin-block: 0;
+  line-height: 1;
+  font-size: 1rem;
 }
 
 .jobMeta {
-  margin-block: 0;
+  margin-block-start: 0;
+  margin-block-end: 5px;
   font-style: italic;
   font-weight: 500;
+  font-size: 0.75rem;
 }
 
 .jobDescription {
@@ -24,6 +30,7 @@
   color: var(--color-muted);
   text-align: justify;
   font-size: 14px;
+  line-height: 1.2;
 }
 
 @media (max-width: 767px) {
