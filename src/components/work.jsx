@@ -31,8 +31,8 @@ export default function Work() {
             duration: 0.4,
           }}
         >
-          <section>
-            <h2>Recent Project</h2>
+          <section className={styles.projectList}>
+            <h2>Recent Projects</h2>
             <ul>
               <li>
                 <h3>
@@ -52,20 +52,22 @@ export default function Work() {
               </li>
             </ul>
           </section>
-          <div>
+          <section className={styles.careerStory}>
             <h2>Career Story</h2>
+            <ul>
             {workHistory.map((el, i) => {
               return (
-                <div className={styles.jobItem} key={i}>
+                <li className={styles.jobItem} key={i}>
                   <h3>{`${el.title} - ${el.company}`}</h3>
                   <p
                     className={styles.jobMeta}
                   >{`${el.date}, ${el.location}`}</p>
                   <p className={styles.jobDescription}>{el.description}</p>
-                </div>
+                </li>
               );
             })}
-          </div>
+            </ul>
+          </section>
         </motion.div>
       )}
     </>

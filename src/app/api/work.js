@@ -5,7 +5,7 @@ export const workHistory = [
     date: "Aug 2023 - Present",
     location: "Washington, D.C.",
     description:
-      "At Radio Free Asia, I led the modernization of 17 news websites, migrating them from outdated stacks to fast, scalable React/Next.js platforms resulting in a 15% reduction in user bounce rate.This project wasn’t just technical; it was about empowering editors with tools that made their publishing workflow 80% faster.",
+      "At Radio Free Asia, I led the modernization of 17 news websites, migrating them from outdated stacks to fast, scalable React/Next.js platforms resulting in a 15% reduction in user bounce rate. This project wasn’t just technical; it was about empowering editors with tools that made their publishing workflow 80% faster.",
   },
   {
     title: "Full Stack Web Developer",
