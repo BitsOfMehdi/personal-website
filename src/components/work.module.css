@@ -65,6 +65,47 @@
   line-height: 1.2;
 }
 
+.iconLink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;  
+  height: 1rem;
+  border-radius: 9999px;
+  color: inherit; /* match surrounding text color */
+  text-decoration: none;
+  outline: none;
+  margin-inline-start: 3px;
+}
+
+/* Light circle (glow) appears on hover/focus */
+.iconLink::before {
+  content: "";
+  position: absolute;
+  inset: -4px; /* slightly larger than the icon */
+  border-radius: inherit;
+  background: radial-gradient(circle, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.08) 60%, rgba(255,255,255,0) 70%);
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 160ms ease, transform 160ms ease;
+  pointer-events: none; /* keep clicks on the anchor */
+}
+
+.iconLink:hover::before,
+.iconLink:focus-visible::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Optional: subtle icon lift on hover */
+.iconLink:hover svg,
+.iconLink:focus-visible svg {
+  transform: translateY(-1px);
+}
+
+
+
 @media (max-width: 767px) {
   .container {
     padding-block: 50px 0;
