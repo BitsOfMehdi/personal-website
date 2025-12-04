@@ -1,6 +1,12 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
 
+let cachedClient = null;
+let cachedDb = null;
+
 export async function connectDb() {
+  if (cachedClient && cachedDb) {
+    return { client: cachedClient, db: cachedDb };
+  }
   const uri = process.env.MONGODB_URI;
 
   const client = new MongoClient(uri, {
@@ -11,9 +17,10 @@ export async function connectDb() {
     },
   });
 
-  try {
-    await client.connect();
-  } finally {
-    await client.close();
-  }
+  await client.connect();
+
+  cachedClient = client;
+  cachedDb = client.db("personalWebsiteDB");
+
+  return { client, db: client.db("personalWebsiteDB") };
 }
