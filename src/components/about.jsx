@@ -6,13 +6,30 @@ import styles from "@/components/about.module.css";
 
 export default function About() {
   const [showAbout, setShowAbout] = useState(false);
+  const [content, setContent] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
   const { navState } = useNavControl();
 
   useEffect(() => {
     if (navState.currentPage === "about") {
       const timeout = setTimeout(() => {
-        setShowAbout(true);
-      }, 200); // wait for Hero shift animation to complete
+        setIsLoading(true);
+
+        (async function fetchContent() {
+          try {
+            const getData = await fetch("/api/content/about");
+            const data = await getData.json();
+            console.log(data);
+            setContent(data);
+            setShowAbout(true);
+          } catch (e) {
+            console.error("Somting went wrong!", e.message);
+          } finally {
+            setIsLoading(false);
+          }
+        })();
+      }, 250);
+
       return () => clearTimeout(timeout);
     } else {
       setShowAbout(false);
@@ -30,16 +47,23 @@ export default function About() {
             duration: 0.4,
           }}
         >
-          <div className={styles.contentShift}>
-            <h2 className={styles.title}>About Me</h2>
-            <p className={styles.description}>
-              I'm a Frontend Engineer with 7+ years of experience building
-              high-performance web applications using React, Next.js, and
-              Node.js. I focus on clean architecture, performance, and creating
-              user-friendly interfaces. I enjoy solving complex problems,
-              collaborating across teams, and building systems that scale.
+          {isLoading ? (
+            <p
+              className={styles.description}
+              style={{
+                margin: "auto",
+                marginBlockStart: "40vh",
+                fontWeight: "500",
+              }}
+            >
+              Loading...
             </p>
-          </div>
+          ) : (
+            <div className={styles.contentShift}>
+              <h2 className={styles.title}>{content.title}</h2>
+              <p className={styles.description}>{content.content}</p>
+            </div>
+          )}
         </motion.div>
       )}
     </>
