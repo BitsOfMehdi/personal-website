@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import * as motion from "motion/react-client";
 import { useNavControl } from "@/context/nav-control-context";
@@ -5,28 +7,18 @@ import styles from "./Hero.module.css";
 import avatar from "@/public/avatar.png";
 import { useMediaQuery } from "@/hooks/useMediaQuery"; // adjust path as needed
 
-export default function Hero() {
+export default function Hero({ slideHero }) {
   const { navState, navDispatch } = useNavControl();
   const isLarge = useMediaQuery("(min-width: 1200px)");
   const isMedium = useMediaQuery("(min-width: 938px) and (max-width: 1199px)");
   // const isSmall = useMediaQuery("(max-width: 767px)");
-
   let targetWidth;
   if (isLarge) {
-    targetWidth =
-      navState.currentPage === "home" || navState.currentPage === "contact"
-        ? "1200px"
-        : "500px";
+    targetWidth = slideHero ? "500px" : "1200px";
   } else if (isMedium) {
-    targetWidth =
-      navState.currentPage === "home" || navState.currentPage === "contact"
-        ? "100vw"
-        : "400px";
+    targetWidth = slideHero ? "400px" : "100vw";
   } else {
-    targetWidth =
-      navState.currentPage === "home" || navState.currentPage === "contact"
-        ? "100vw"
-        : "0px";
+    targetWidth = slideHero ? "0px" : "100vw";
   }
 
   return (
