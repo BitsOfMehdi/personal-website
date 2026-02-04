@@ -36,8 +36,8 @@ export default function Work() {
             <ul>
               <li>
                 <h3>
-                    AWS Serverless URL Shortener
-                   <a
+                  AWS Serverless URL Shortener
+                  <a
                     className={styles.iconLink}
                     href="https://github.com/BitsOfMehdi/aws-url-shortener/blob/master/README.md"
                     target="_blank"
@@ -63,12 +63,15 @@ export default function Work() {
                     </svg>
                   </a>
                 </h3>
-                <p>A minimal serverless URL shortener built with AWS Lambda, API Gateway (HTTP API v2), and DynamoDB.</p>
+                <p>
+                  A minimal serverless URL shortener built with AWS Lambda, API
+                  Gateway (HTTP API v2), and DynamoDB.
+                </p>
               </li>
               <li>
                 <h3>
-                    AWS File Drop
-                    <a
+                  AWS File Drop
+                  <a
                     className={styles.iconLink}
                     href="https://github.com/BitsOfMehdi/aws-file-drop/blob/master/README.md"
                     target="_blank"
@@ -94,14 +97,21 @@ export default function Work() {
                     </svg>
                   </a>
                 </h3>
-                <p>A lightweight file sharing service: users upload a file, receive a shareable link, and others can download it up to N times within D days.</p>
+                <p>
+                  A lightweight file sharing service: users upload a file,
+                  receive a shareable link, and others can download it up to N
+                  times within D days.
+                </p>
               </li>
             </ul>
           </section>
           <section className={styles.careerStory}>
             <h2>Career Story</h2>
             <ul>
-            {workHistory.map((el, i) => {
+              <li className={styles.jobItem} key={"001"}>
+                <h3>Coming soon...</h3>
+              </li>
+              {/* {workHistory.map((el, i) => {
               return (
                 <li className={styles.jobItem} key={i}>
                   <h3>{`${el.title} - ${el.company}`}</h3>
@@ -111,7 +121,7 @@ export default function Work() {
                   <p className={styles.jobDescription}>{el.description}</p>
                 </li>
               );
-            })}
+            })} */}
             </ul>
           </section>
         </motion.div>
