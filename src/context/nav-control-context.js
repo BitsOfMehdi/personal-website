@@ -1,5 +1,4 @@
 "use client";
-
 import { createContext, useReducer, useContext } from "react";
 
 const initialState = {
@@ -30,7 +29,7 @@ const navReducer = (state, action) => {
 
 const NavControlContext = createContext();
 
-export function NavControlProvider({ children }) {
+export default function NavControlProvider({ children }) {
   const [navState, navDispatch] = useReducer(navReducer, initialState);
 
   return (

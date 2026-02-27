@@ -1,5 +1,4 @@
-"use client";
-import { NavControlProvider } from "@/context/nav-control-context";
+import NavControlProvider from "@/context/nav-control-context";
 import SectionContainer from "@/components/layout/SectionContainer";
 import Header from "@/components/layout/Header";
 import Hero from "@/components/sections/Hero";
