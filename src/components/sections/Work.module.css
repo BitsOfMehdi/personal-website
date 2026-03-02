@@ -70,7 +70,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1rem;  
+  width: 1rem;
   height: 1rem;
   border-radius: 9999px;
   color: inherit; /* match surrounding text color */
@@ -85,7 +85,12 @@
   position: absolute;
   inset: -4px; /* slightly larger than the icon */
   border-radius: inherit;
-  background: radial-gradient(circle, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.08) 60%, rgba(255,255,255,0) 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0.08) 60%,
+    rgba(255, 255, 255, 0) 70%
+  );
   opacity: 0;
   transform: scale(0.9);
   transition: opacity 160ms ease, transform 160ms ease;
@@ -104,8 +109,6 @@
   transform: translateY(-1px);
 }
 
-
-
 @media (max-width: 767px) {
   .container {
     padding-block: 50px 0;
@@ -121,7 +124,6 @@
   .careerStory {
     padding-block-end: 1rem;
   }
-    
 }
 
 @media (max-height: 767px) {

@@ -1,5 +1,6 @@
+"use client";
 import { Mail, Github, Linkedin } from "lucide-react";
-import Modal from "../utility/Modal";
+import Modal from "@/components/ui/Modal";
 import { useNavControl } from "@/context/nav-control-context";
 import styles from "./Contact.module.css";
 

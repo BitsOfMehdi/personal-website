@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
@@ -100,6 +101,6 @@ export default function Modal({
         </motion.div>
       )}
     </AnimatePresence>,
-    document.getElementById("portal-root")
+    document.getElementById("portal-root"),
   );
 }

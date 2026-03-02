@@ -1,10 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
 import { useNavControl } from "@/context/nav-control-context";
-import About from "@/components/about";
-import Work from "@/components/work";
-import { useMediaQuery } from "@/utility/useMediaQuery";
-import classes from "@/components/section-container.module.css";
+import About from "@/components/sections/About";
+import Work from "@/components/sections/Work";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
+import styles from "@/components/layout/SectionContainer.module.css";
 
 export default function SectionContainer() {
   const { navState } = useNavControl();
@@ -21,7 +21,7 @@ export default function SectionContainer() {
         marginRight: "auto",
       }}
     >
-      <section className={classes.layout}>
+      <section className={styles.layout}>
         {navState.currentPage === "work" && <Work />}
         {navState.currentPage === "about" && <About />}
       </section>

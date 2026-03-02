@@ -1,9 +1,10 @@
+"use client";
 import Image from "next/image";
 import * as motion from "motion/react-client";
 import { useNavControl } from "@/context/nav-control-context";
 import styles from "./Hero.module.css";
 import avatar from "@/public/avatar.png";
-import { useMediaQuery } from "@/utility/useMediaQuery"; // adjust path as needed
+import { useMediaQuery } from "@/hooks/useMediaQuery"; // adjust path as needed
 
 export default function Hero() {
   const { navState, navDispatch } = useNavControl();

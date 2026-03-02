@@ -1,11 +1,10 @@
-"use client";
-import { NavControlProvider } from "@/context/nav-control-context";
-import SectionContainer from "@/components/section-container";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Contact from "@/components/Contact";
-import Footer from "@/components/footer";
-import styles from "@/styles/home.module.css";
+import NavControlProvider from "@/context/nav-control-context";
+import SectionContainer from "@/components/layout/SectionContainer";
+import Header from "@/components/layout/Header";
+import Hero from "@/components/sections/Hero";
+import Contact from "@/components/sections/Contact";
+import Footer from "@/components/layout/Footer";
+import styles from "./page.module.css";
 
 export default function App() {
   return (
