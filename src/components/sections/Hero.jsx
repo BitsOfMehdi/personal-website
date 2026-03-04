@@ -94,7 +94,13 @@ export default function Hero() {
             <div className={styles.buttonWrapper}>
               <button
                 className={styles.ctaButton}
-                onClick={() => navDispatch({ type: "work" })}
+                onClick={() => {
+                  if (navState.currentPage === "home") {
+                    navDispatch({ type: "work" });
+                  } else {
+                    navDispatch({ type: "home" });
+                  }
+                }}
               >
                 View My Work
               </button>
