@@ -4,21 +4,19 @@ import * as motion from "motion/react-client";
 import { useNavControl } from "@/context/nav-control-context";
 import styles from "./Hero.module.css";
 import avatar from "@/public/avatar.png";
-import { useMediaQuery } from "@/hooks/useMediaQuery"; // adjust path as needed
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 export default function Hero() {
   const { navState, navDispatch } = useNavControl();
-  const isLarge = useMediaQuery("(min-width: 1200px)");
-  const isMedium = useMediaQuery("(min-width: 938px) and (max-width: 1199px)");
-  // const isSmall = useMediaQuery("(max-width: 767px)");
-
+  const queryMedia = useMediaQuery();
+  console.log("query: ", queryMedia);
   let targetWidth;
-  if (isLarge) {
+  if (queryMedia === "large") {
     targetWidth =
       navState.currentPage === "home" || navState.currentPage === "contact"
         ? "1200px"
         : "500px";
-  } else if (isMedium) {
+  } else if (queryMedia === "medium") {
     targetWidth =
       navState.currentPage === "home" || navState.currentPage === "contact"
         ? "100vw"
@@ -34,15 +32,14 @@ export default function Hero() {
     <div>
       <motion.section
         className={styles.heroSection}
-        initial={{ width: isLarge ? "1200px" : "100vw" }}
+        initial={{ width: queryMedia === "large" ? "1200px" : "100vw" }}
         animate={{ width: targetWidth }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         style={{
           transformOrigin: "left",
         }}
       >
-        {!isLarge &&
-        !isMedium &&
+        {queryMedia === "mobile" &&
         navState.currentPage !== "home" &&
         navState.currentPage !== "contact" ? (
           <motion.div

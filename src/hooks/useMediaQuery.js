@@ -1,16 +1,36 @@
 "use client";
 import { useEffect, useState } from "react";
 
-export function useMediaQuery(query) {
-  const [matches, setMatches] = useState(false);
+const large = "(min-width: 1200px)";
+const medium = "(min-width: 938px) and (max-width: 1199px)";
+// const small = "(max-width: 767px)";
+
+export default function useMediaQuery() {
+  const [matches, setMatches] = useState("mobile");
 
   useEffect(() => {
-    const media = window.matchMedia(query);
-    if (media.matches !== matches) setMatches(media.matches);
-    const listener = () => setMatches(media.matches);
-    media.addEventListener("change", listener);
-    return () => media.removeEventListener("change", listener);
-  }, [matches, query]);
+    const isLarge = window.matchMedia(large);
+    const isMedium = window.matchMedia(medium);
+    // const isMobile = window.matchMedia(small);
+
+    const listener = () => {
+      if (isLarge.matches) {
+        setMatches("large");
+      } else if (isMedium.matches) {
+        setMatches("medium");
+      } else {
+        setMatches("mobile");
+      }
+    };
+
+    listener(); // Initial check on mount
+    isLarge.addEventListener("change", listener);
+    isMedium.addEventListener("change", listener);
+    return () => {
+      isLarge.removeEventListener("change", listener);
+      isMedium.removeEventListener("change", listener);
+    };
+  }, []);
 
   return matches;
 }
