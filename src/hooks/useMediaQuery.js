@@ -7,6 +7,7 @@ const medium = "(min-width: 938px) and (max-width: 1199px)";
 
 export default function useMediaQuery() {
   const [matches, setMatches] = useState("mobile");
+  // const [targetWidth, set] =
 
   useEffect(() => {
     const isLarge = window.matchMedia(large);

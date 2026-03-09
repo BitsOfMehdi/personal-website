@@ -14,7 +14,7 @@ export default function Hero() {
   if (queryMedia === "large") {
     targetWidth =
       navState.currentPage === "home" || navState.currentPage === "contact"
-        ? "1200px"
+        ? "100vw"
         : "500px";
   } else if (queryMedia === "medium") {
     targetWidth =
