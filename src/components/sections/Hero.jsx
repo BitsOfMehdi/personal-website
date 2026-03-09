@@ -8,38 +8,20 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 
 export default function Hero() {
   const { navState, navDispatch } = useNavControl();
-  const queryMedia = useMediaQuery();
-  console.log("query: ", queryMedia);
-  let targetWidth;
-  if (queryMedia === "large") {
-    targetWidth =
-      navState.currentPage === "home" || navState.currentPage === "contact"
-        ? "100vw"
-        : "500px";
-  } else if (queryMedia === "medium") {
-    targetWidth =
-      navState.currentPage === "home" || navState.currentPage === "contact"
-        ? "100vw"
-        : "400px";
-  } else {
-    targetWidth =
-      navState.currentPage === "home" || navState.currentPage === "contact"
-        ? "100vw"
-        : "0px";
-  }
+  const { matches, targetWidth } = useMediaQuery();
 
   return (
     <div>
       <motion.section
         className={styles.heroSection}
-        initial={{ width: queryMedia === "large" ? "1200px" : "100vw" }}
+        initial={{ width: matches === "large" ? "1200px" : "100vw" }}
         animate={{ width: targetWidth }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         style={{
           transformOrigin: "left",
         }}
       >
-        {queryMedia === "mobile" &&
+        {matches === "mobile" &&
         navState.currentPage !== "home" &&
         navState.currentPage !== "contact" ? (
           <motion.div

@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useNavControl } from "@/context/nav-control-context";
 
 const large = "(min-width: 1200px)";
 const medium = "(min-width: 938px) and (max-width: 1199px)";
@@ -7,12 +8,25 @@ const medium = "(min-width: 938px) and (max-width: 1199px)";
 
 export default function useMediaQuery() {
   const [matches, setMatches] = useState("mobile");
-  // const [targetWidth, set] =
+  const [targetWidth, setTargetWidth] = useState("100vw");
+  const { navState } = useNavControl();
 
   useEffect(() => {
     const isLarge = window.matchMedia(large);
     const isMedium = window.matchMedia(medium);
     // const isMobile = window.matchMedia(small);
+
+    if (!navState.isHeroShrinked) {
+      setTargetWidth("100vw");
+    } else {
+      if (isLarge.matches) {
+        setTargetWidth("500px");
+      } else if (isMedium.matches) {
+        setTargetWidth("400px");
+      } else {
+        setTargetWidth("0px");
+      }
+    }
 
     const listener = () => {
       if (isLarge.matches) {
@@ -31,7 +45,7 @@ export default function useMediaQuery() {
       isLarge.removeEventListener("change", listener);
       isMedium.removeEventListener("change", listener);
     };
-  }, []);
+  }, [navState.isHeroShrinked, matches]);
 
-  return matches;
+  return { matches, targetWidth };
 }

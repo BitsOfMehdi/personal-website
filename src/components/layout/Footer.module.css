@@ -18,7 +18,7 @@
   color: #4b5563;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 938px) {
   .footer {
     display: none;
   }

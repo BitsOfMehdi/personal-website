@@ -3,25 +3,26 @@ import { createContext, useReducer, useContext } from "react";
 
 const initialState = {
   currentPage: "home",
-  isModalClosed: true, // Default state for modal
+  isHeroShrinked: false,
+  isModalClosed: true,
 };
 
 const navReducer = (state, action) => {
   switch (action.type) {
     case "home":
-      return { ...state, currentPage: "home" };
+      return { ...state, isHeroShrinked: false, currentPage: "home" };
     case "contact":
-      return { ...state, currentPage: "contact" };
+      return { ...state, isHeroShrinked: false, currentPage: "contact" };
     case "work":
-      return { ...state, currentPage: "work" };
+      return { ...state, isHeroShrinked: true, currentPage: "work" };
     case "about":
-      return { ...state, currentPage: "about" };
+      return { ...state, isHeroShrinked: true, currentPage: "about" };
     case "blog":
-      return { ...state, currentPage: "blog" };
+      return { ...state, isHeroShrinked: true, currentPage: "blog" };
     case "closeModal":
       return { ...state, isModalClosed: true, currentPage: "home" };
     case "openModal":
-      return { ...state, isModalClosed: false };
+      return { ...state, isHeroShrinked: false, isModalClosed: false };
     default:
       return state;
   }
