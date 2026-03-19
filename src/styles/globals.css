@@ -6,9 +6,9 @@
   --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, monospace;
 
   /* Custom Colors */
-  --color-background: rgb(241, 240, 232);
-  --color-background-container: rgb(238, 224, 201);
-  --color-primary: #9eafb6;
+  --color-background: #f1f0e8;
+  --color-background-container: #eee0c9;
+  --color-primary: #b3ccd4;
   --color-accent: #c4772a;
   --color-dark: #233349;
 }
@@ -19,4 +19,8 @@ body {
   padding: 0;
   font-family: var(--font-sans);
   line-height: 1.6;
+}
+
+p {
+  margin: 0;
 }
