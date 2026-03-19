@@ -71,6 +71,13 @@ export default function Modal({
           exit={{ opacity: 0 }}
           transition={{ duration: 0.25 }} // optional
           className={overlayClassName}
+          // style={{
+          //   position: "fixed",
+          //   top: 0,
+          //   left: 0,
+          //   width: "100vw",
+          //   height: "100vh",
+          // }}
           onClick={handleClose}
         >
           <motion.div

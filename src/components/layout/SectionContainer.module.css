@@ -8,5 +8,6 @@
 @media (max-width: 938px) {
   .layout {
     margin-inline: auto;
+    display: flex;
   }
 }
