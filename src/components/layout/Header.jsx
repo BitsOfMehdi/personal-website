@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+
 import { useNavControl } from "@/context/nav-control-context";
 import styles from "./Header.module.css";
 
@@ -11,11 +11,6 @@ export default function Header() {
   const handleHomeClick = () => {
     navDispatch({ type: "home" });
   };
-
-  useEffect(() => {
-    if (navState.isModalClosed) {
-    }
-  }, [navState.isModalClosed]);
 
   return (
     <header className={styles.header}>
