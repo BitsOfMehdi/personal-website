@@ -18,7 +18,12 @@ export default function Hero() {
       animate={
         matches === "mobile" && navState.isHeroShrinked
           ? { x: "-100vw" }
-          : { width: matches === "large" && !navState.isHeroShrinked ? "1200px" : targetWidth }
+          : {
+              width:
+                matches === "large" && !navState.isHeroShrinked
+                  ? "1200px"
+                  : targetWidth,
+            }
       }
       transition={{ duration: 0.5, ease: "easeInOut" }}
       style={{
