@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect, use } from "react";
 import { useNavControl } from "@/context/nav-control-context";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { motion } from "motion/react";
@@ -8,23 +9,47 @@ import styles from "./Hero.module.css";
 import avatar from "@/public/avatar.png";
 
 export default function Hero() {
+  const [animateValues, setAnimateValues] = useState({
+    maxWidth: "1200px",
+    x: "0px",
+  });
   const { navState, navDispatch } = useNavControl();
-  const { matches, targetWidth } = useMediaQuery();
+  const { matches } = useMediaQuery();
+
+  useEffect(() => {
+    setAnimateValues((prev) => {
+      if (matches === "large") {
+        return {
+          ...prev,
+          maxWidth: "500px",
+          x: "0px",
+        };
+      } else if (matches === "medium") {
+        return {
+          ...prev,
+          maxWidth: "400px",
+          x: "0px",
+        };
+      } else {
+        return {
+          ...prev,
+          maxWidth: "0px",
+          x: "-100vw",
+        };
+      }
+    });
+  }, [matches]);
+
+  const { maxWidth, x } = animateValues;
+  const isAnimating = navState.isHeroShrinked
+    ? { maxWidth, x, width: "100vw" }
+    : { maxWidth: "1200px", x: "0px", width: "100vw" };
 
   return (
     <motion.section
       className={styles.heroSection}
       initial={{ width: matches === "large" ? "1200px" : "100vw" }}
-      animate={
-        matches === "mobile" && navState.isHeroShrinked
-          ? { x: "-100vw" }
-          : {
-              width:
-                matches === "large" && !navState.isHeroShrinked
-                  ? "1200px"
-                  : targetWidth,
-            }
-      }
+      animate={{ ...isAnimating }}
       transition={{ duration: 0.3, ease: "easeIn" }}
     >
       <div className={styles.content}>
