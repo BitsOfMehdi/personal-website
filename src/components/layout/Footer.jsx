@@ -11,8 +11,7 @@ function Footer() {
       className={styles.footer}
       initial={{ width: matches === "large" ? "1200px" : "100vw" }}
       animate={{ width: targetWidth }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
-      style={{ transformOrigin: "left" }}
+      transition={{ duration: 0.3, ease: "easeIn" }}
     >
       <div className={styles.footerContent}>
         <p className={styles.footerText}>

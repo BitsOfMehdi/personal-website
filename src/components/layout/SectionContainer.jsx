@@ -9,32 +9,38 @@ import Work from "@/components/sections/Work";
 import styles from "@/components/layout/SectionContainer.module.css";
 
 export default function SectionContainer() {
-  const [sectionWidth, setSectionWidth] = useState({
+  const [animateValues, setAnimateValues] = useState({
     maxWidth: "0px",
     x: "1200px",
   });
   const { navState } = useNavControl();
-  const { matches, targetWidth } = useMediaQuery();
+  const { matches } = useMediaQuery();
 
   useEffect(() => {
-    setSectionWidth((prev) => {
+    setAnimateValues((prev) => {
       if (matches === "large") {
         return { ...prev, maxWidth: "700px", x: "500px" };
       } else if (matches === "medium") {
-        return { ...prev, maxWidth: "700px", x: "400px" };
+        return {
+          ...prev,
+          maxWidth: "calc(100vw - 400px)",
+          x: "400px",
+        };
       } else {
         return { ...prev, maxWidth: "100vw", x: "0px" };
       }
     });
   }, [matches]);
 
-  const { maxWidth, x } = sectionWidth;
-
+  const { maxWidth, x } = animateValues;
   const isAnimating = navState.isHeroShrinked
-    ? { maxWidth, x, visibility: "visible" }
-    : { maxWidth: 0, x: "1200px", visibility: "hidden" };
-
-  console.log({ targetWidth, matches });
+    ? { maxWidth, width: "100vw", x, visibility: "visible" }
+    : {
+        maxWidth: "0px",
+        width: "0px",
+        x: "min(1200px, 100vw)",
+        visibility: "hidden",
+      };
 
   return (
     <motion.section
@@ -42,7 +48,8 @@ export default function SectionContainer() {
       animate={{
         ...isAnimating,
       }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
+      transition={{ duration: 0.3, ease: "easeIn" }}
+      // style={{ transformOrigin: "right", position: "absolute" }}
     >
       {navState.currentPage === "work" && <Work />}
       {navState.currentPage === "about" && <About />}

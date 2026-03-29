@@ -25,11 +25,7 @@ export default function Hero() {
                   : targetWidth,
             }
       }
-      transition={{ duration: 0.5, ease: "easeInOut" }}
-      style={{
-        transformOrigin: "left",
-        position: "absolute",
-      }}
+      transition={{ duration: 0.3, ease: "easeIn" }}
     >
       <div className={styles.content}>
         <div className={styles.avatarWrapper}>
