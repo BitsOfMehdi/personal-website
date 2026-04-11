@@ -5,7 +5,7 @@ import * as motion from "motion/react-client";
 import useAnimate from "@/hooks/useAnimate";
 import { useNavControl } from "@/context/nav-control-context";
 
-function Footer() {
+export default function Footer() {
   const { transformLeft, defaultTransformLeft, transition } = useAnimate();
   const { navState } = useNavControl();
 
@@ -27,5 +27,3 @@ function Footer() {
     </motion.footer>
   );
 }
-
-export default Footer;

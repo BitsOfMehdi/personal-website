@@ -1,14 +1,19 @@
 "use client";
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavControl } from "@/context/nav-control-context";
 import sytles from "./Modal.module.css";
 
+type ModalProps = {
+  children: ReactNode;
+  direction: string;
+};
+
 export default function Modal({
   children,
   direction = "top", // default direction
-}) {
+}: ModalProps) {
   const { navState, navDispatch } = useNavControl();
   const [mounted, setMounted] = useState(false);
 

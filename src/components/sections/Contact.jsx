@@ -4,7 +4,7 @@ import Modal from "@/components/ui/Modal";
 import { useNavControl } from "@/context/nav-control-context";
 import styles from "./Contact.module.css";
 import ModalCloseButton from "../ui/ModalCloseButton";
-import { use, useEffect } from "react";
+import { useEffect } from "react";
 
 function Contact() {
   const { navState, navDispatch } = useNavControl();
