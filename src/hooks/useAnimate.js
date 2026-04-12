@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { easeIn } from "motion";
 import useMediaQuery from "./useMediaQuery";
 
 export default function useAnimate() {
@@ -47,7 +48,7 @@ export default function useAnimate() {
     x: "min(1200px, 100vw)",
     visibility: "hidden",
   };
-  const transition = { duration: 0.3, ease: "easeIn" };
+  const transition = { duration: 0.3, ease: easeIn };
 
   return {
     defaultTransformLeft,
