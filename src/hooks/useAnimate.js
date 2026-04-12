@@ -36,7 +36,11 @@ export default function useAnimate() {
     }
   }, [matches]);
 
-  const defaultTransformLeft = { maxWidth: "1200px", x: "0px", width: "100vw" };
+  const defaultTransformLeft = {
+    maxWidth: "1200px",
+    x: "0px",
+    width: "100vw",
+  };
   const defaulttransformRight = {
     maxWidth: "0px",
     width: "0px",

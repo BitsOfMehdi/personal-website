@@ -6,7 +6,7 @@ import styles from "./Contact.module.css";
 import ModalCloseButton from "../ui/ModalCloseButton";
 import { useEffect } from "react";
 
-function Contact() {
+export default function Contact() {
   const { navState, navDispatch } = useNavControl();
 
   useEffect(() => {
@@ -16,7 +16,7 @@ function Contact() {
   }, [navState.currentPage, navDispatch]);
 
   return (
-    <Modal>
+    <Modal direction="top">
       <div className={styles.contact}>
         <ModalCloseButton />
         <h2 className={styles.title}>Let’s Connect</h2>
@@ -50,5 +50,3 @@ function Contact() {
     </Modal>
   );
 }
-
-export default Contact;

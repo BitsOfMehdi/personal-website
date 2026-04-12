@@ -7,13 +7,10 @@ import sytles from "./Modal.module.css";
 
 type ModalProps = {
   children: ReactNode;
-  direction: string;
+  direction: "top" | "right" | "bottom" | "left";
 };
 
-export default function Modal({
-  children,
-  direction = "top", // default direction
-}: ModalProps) {
+export default function Modal({ children, direction }: ModalProps) {
   const { navState, navDispatch } = useNavControl();
   const [mounted, setMounted] = useState(false);
 
@@ -49,6 +46,7 @@ export default function Modal({
       break;
   }
 
+  const portalRoot = document.getElementById("portal-root");
   return createPortal(
     <AnimatePresence>
       {navState.isModalOpen && (
@@ -72,6 +70,6 @@ export default function Modal({
         </motion.div>
       )}
     </AnimatePresence>,
-    document.getElementById("portal-root"),
+    portalRoot!,
   );
 }

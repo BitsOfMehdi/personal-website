@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 import { motion } from "framer-motion";
 import { useNavControl } from "@/context/nav-control-context";
-import { workHistory } from "@/app/api/work";
+// import { workHistory } from "@/app/api/work";
 import Card from "@/components/ui/Card";
 import styles from "./Work.module.css";
 

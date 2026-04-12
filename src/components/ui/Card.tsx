@@ -3,7 +3,7 @@ import styles from "./Card.module.css";
 
 type CardProps = {
   children: ReactNode;
-  className: string;
+  className?: string;
 };
 
 export default function Card({ children, className = "" }: CardProps) {
