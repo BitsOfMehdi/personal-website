@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 
 import { motion } from "framer-motion";
 import { useNavControl } from "@/context/nav-control-context";
-// import { workHistory } from "@/app/api/work";
 import Card from "@/components/ui/Card";
 import styles from "./Work.module.css";
 
@@ -118,17 +117,6 @@ export default function Work() {
                   <h3>Coming soon...</h3>
                 </Card>
               </li>
-              {/* {workHistory.map((el, i) => {
-              return (
-                <li className={styles.jobItem} key={i}>
-                  <h3>{`${el.title} - ${el.company}`}</h3>
-                  <p
-                    className={styles.jobMeta}
-                  >{`${el.date}, ${el.location}`}</p>
-                  <p className={styles.jobDescription}>{el.description}</p>
-                </li>
-              );
-            })} */}
             </ul>
           </section>
         </motion.div>
