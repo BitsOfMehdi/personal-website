@@ -1,15 +1,16 @@
-import { useState, useEffect, CSSProperties } from "react";
-import { easeIn, type Transition } from "motion";
+import { useState, useEffect } from "react";
+import { easeIn } from "motion";
+import type { Transition, TargetAndTransition } from "motion";
 import useMediaQuery from "./useMediaQuery";
 
 export default function useAnimate() {
   // this hook to manage all animate values and logic in one place and make it reusable across components
   // it will return objects conatins css/motion values for left and right container transforms, as well as duration and ease values.
-  const [transformLeft, setTransformLeft] = useState<CSSProperties>({
+  const [transformLeft, setTransformLeft] = useState<TargetAndTransition>({
     maxWidth: "1200px",
     x: "0px",
   });
-  const [transformRight, setTransformRight] = useState<CSSProperties>({
+  const [transformRight, setTransformRight] = useState<TargetAndTransition>({
     maxWidth: "0px",
     x: "1200px",
     visibility: "visible",
