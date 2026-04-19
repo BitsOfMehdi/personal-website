@@ -22,8 +22,8 @@ export default function SectionContainer() {
       animate={isAnimating}
       transition={transition}
     >
-      {navState.currentPage === "work" && <Work />}
-      {navState.currentPage === "about" && <About />}
+      {navState.curSection === "work" && <Work />}
+      {navState.curSection === "about" && <About />}
     </motion.section>
   );
 }

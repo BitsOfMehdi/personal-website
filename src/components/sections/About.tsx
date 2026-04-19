@@ -10,7 +10,7 @@ export default function About() {
   const { navState } = useNavControl();
 
   useEffect(() => {
-    if (navState.currentPage === "about") {
+    if (navState.curSection === "about") {
       const timeout = setTimeout(() => {
         setShowAbout(true);
       }, 200); // wait for Hero shift animation to complete
@@ -18,7 +18,7 @@ export default function About() {
     } else {
       setShowAbout(false);
     }
-  }, [navState.currentPage]);
+  }, [navState.curSection]);
 
   return (
     <>

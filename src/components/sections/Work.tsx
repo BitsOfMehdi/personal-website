@@ -12,7 +12,7 @@ export default function Work() {
   const { navState } = useNavControl();
 
   useEffect(() => {
-    if (navState.currentPage === "work") {
+    if (navState.curSection === "work") {
       const timeout = setTimeout(() => {
         setShowWork(true);
       }, 200); // wait for Hero shift animation to complete
@@ -20,7 +20,7 @@ export default function Work() {
     } else {
       setShowWork(false);
     }
-  }, [navState.currentPage]);
+  }, [navState.curSection]);
   return (
     <>
       {showWork && (

@@ -1,9 +1,10 @@
 "use client";
 
 import { useNavControl } from "@/context/nav-control-context";
+import { CurSection } from "@/context/nav-control-context";
 import styles from "./Header.module.css";
 
-const sections = ["about", "work", "contact"];
+const sections: CurSection[] = ["about", "work", "contact"];
 
 export default function Header() {
   const { navState, navDispatch } = useNavControl();
@@ -20,14 +21,14 @@ export default function Header() {
         </h1>
         <div className={styles.menuWrapper}>
           <ul className={styles.navList}>
-            {sections.map((section) => (
+            {sections.map((section: CurSection) => (
               <li key={section} className={styles.navItem}>
                 <button
                   onClick={() => {
                     navDispatch({ type: section });
                   }}
                   className={`${styles.navLink} ${
-                    navState.currentPage === section ? styles.active : ""
+                    navState.curSection === section ? styles.active : ""
                   }`}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}

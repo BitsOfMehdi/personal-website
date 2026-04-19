@@ -38,7 +38,7 @@ export default function Hero() {
         <button
           className={styles.ctaButton}
           onClick={() => {
-            if (navState.currentPage === "home") {
+            if (navState.curSection === "home") {
               navDispatch({ type: "work" });
             } else {
               navDispatch({ type: "home" });

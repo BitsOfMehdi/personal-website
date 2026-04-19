@@ -10,10 +10,10 @@ export default function Contact() {
   const { navState, navDispatch } = useNavControl();
 
   useEffect(() => {
-    if (navState.currentPage === "contact") {
+    if (navState.curSection === "contact") {
       navDispatch({ type: "openModal" });
     }
-  }, [navState.currentPage, navDispatch]);
+  }, [navState.curSection, navDispatch]);
 
   return (
     <Modal direction="top">
