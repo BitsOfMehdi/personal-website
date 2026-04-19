@@ -31,7 +31,7 @@ export default function Hero() {
           height={200}
         />
       </div>
-      <h1 className={styles.heading}>Hey, I'm Mehdi</h1>
+      <h1 className={styles.heading}>Hey, I&apos;m Mehdi</h1>
       <p className={styles.description}>Software Engineer</p>
       <p className={styles.description}>Building fast, scalable web apps.</p>
       <div className={styles.buttonWrapper}>

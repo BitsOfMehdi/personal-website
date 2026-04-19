@@ -35,9 +35,9 @@ export default function About() {
             <h2 className={styles.title}>About Me</h2>
             <Card>
               <p className={styles.description}>
-                I'm a Frontend Engineer with 7+ years of experience building
-                high-performance web applications using React, Next.js, and
-                Node.js. I focus on clean architecture, performance, and
+                I&apos;m a Frontend Engineer with 7+ years of experience
+                building high-performance web applications using React, Next.js,
+                and Node.js. I focus on clean architecture, performance, and
                 creating user-friendly interfaces. I enjoy solving complex
                 problems, collaborating across teams, and building systems that
                 scale.
