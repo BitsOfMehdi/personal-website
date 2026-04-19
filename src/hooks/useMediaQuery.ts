@@ -2,26 +2,28 @@
 import { useEffect, useState } from "react";
 import { useNavControl } from "@/context/nav-control-context";
 
-const large = "(min-width: 1200px)";
-const medium = "(min-width: 938px) and (max-width: 1199px)";
-// const small = "(max-width: 767px)";
+const DESKTOP: string = "(min-width: 1200px)";
+const TABLET: string = "(min-width: 938px) and (max-width: 1199px)";
+// const MOBILE: string = "(max-width: 767px)";
+
+type Matches = "desktop" | "tablet" | "mobile";
 
 export default function useMediaQuery() {
-  const [matches, setMatches] = useState("mobile");
+  const [matches, setMatches] = useState<Matches>("mobile");
   const [targetWidth, setTargetWidth] = useState("100vw");
   const { navState } = useNavControl();
 
   useEffect(() => {
-    const isLarge = window.matchMedia(large);
-    const isMedium = window.matchMedia(medium);
+    const isDesktop = window.matchMedia(DESKTOP);
+    const isTablet = window.matchMedia(TABLET);
     // const isMobile = window.matchMedia(small);
 
     if (!navState.isHeroShrinked) {
       setTargetWidth("100vw");
     } else {
-      if (isLarge.matches) {
+      if (isDesktop.matches) {
         setTargetWidth("500px");
-      } else if (isMedium.matches) {
+      } else if (isTablet.matches) {
         setTargetWidth("400px");
       } else {
         setTargetWidth("0px");
@@ -29,21 +31,21 @@ export default function useMediaQuery() {
     }
 
     const listener = () => {
-      if (isLarge.matches) {
-        setMatches("large");
-      } else if (isMedium.matches) {
-        setMatches("medium");
+      if (isDesktop.matches) {
+        setMatches("desktop");
+      } else if (isTablet.matches) {
+        setMatches("tablet");
       } else {
         setMatches("mobile");
       }
     };
 
     listener(); // Initial check on mount
-    isLarge.addEventListener("change", listener);
-    isMedium.addEventListener("change", listener);
+    isDesktop.addEventListener("change", listener);
+    isTablet.addEventListener("change", listener);
     return () => {
-      isLarge.removeEventListener("change", listener);
-      isMedium.removeEventListener("change", listener);
+      isDesktop.removeEventListener("change", listener);
+      isTablet.removeEventListener("change", listener);
     };
   }, [navState.isHeroShrinked, matches]);
 
