@@ -6,9 +6,8 @@
   --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, monospace;
 
   /* Custom Colors */
-  --color-background: #f1f0e8;
-  --color-background-container: #eee0c9;
-  --color-primary: #b3ccd4;
+  --color-background: #fefae0;
+  --color-card: #faedcd;
   --color-accent: #c4772a;
   --color-dark: #233349;
 }
